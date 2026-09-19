@@ -484,7 +484,7 @@
   .masterplan{ position:relative; border-radius: 6px; overflow:hidden; aspect-ratio: 4 / 3; background: linear-gradient(160deg, #163C58, #0E2C43); }
   .masterplan-photo-placeholder{
     position:absolute; inset:0;
-    background: repeating-linear-gradient(90deg, rgba(247,243,236,.05) 0 1px, transparent 1px 48px), repeating-linear-gradient(0deg, rgba(247,243,236,.05) 0 1px, transparent 1px 48px), linear-gradient(150deg, #1B4763, #0C2334);
+    background: linear-gradient(150deg, rgba(27,71,99,0.3), rgba(12,35,52,0.3)), url('ph10.jpg') center/cover no-repeat;
   }
   .plot-grid{ position:absolute; inset: 8%; display:grid; grid-template-columns: repeat(5, 1fr); grid-template-rows: repeat(4, 1fr); gap: 6px; }
   .plot{ position:relative; border: 1.5px dashed rgba(247,243,236,.25); border-radius: 3px; cursor: default; transition: transform .3s ease, border-color .3s ease, background .3s ease; }
@@ -603,6 +603,7 @@
   .footer-phones li a{ display:flex; align-items:center; gap:10px; font-size:15px; color: rgba(247,243,236,.85); direction: ltr; justify-content:flex-end; transition: color .2s ease; }
   .footer-phones li a:hover{ color: var(--sand); }
   .footer-phones li a svg{ width:17px; height:17px; flex-shrink:0; color: var(--turquoise); }
+  
   .whatsapp-btn{
     display:inline-flex; align-items:center; gap:10px; background: #25D366; color: #08331c !important;
     font-weight:700; padding: 10px 20px; border-radius: 999px; font-size:14.5px; margin-top:6px; transition: transform .2s ease, box-shadow .2s ease;
@@ -963,7 +964,15 @@
         </span>
       </div>
 
+      <!-- قائمة أرقام الاتصال مع تمييز الرقم الرئيسي باللون الذهبي -->
       <ul class="footer-phones">
+        <li>
+          <a href="tel:+967780181818" dir="ltr" style="color: var(--gold); font-size: 16px; font-weight: 900;">
+            <span style="font-family: 'Tajawal', sans-serif; font-size: 13px; margin-right: 8px; color: var(--sand); font-weight: normal;">(الرئيسي)</span>
+            780181818
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.1-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.13.97.36 1.92.7 2.83a2 2 0 01-.45 2.1L8 9.9a16 16 0 006 6l1.27-1.27a2 2 0 012.1-.45c.91.34 1.86.57 2.83.7A2 2 0 0122 16.9z"/></svg>
+          </a>
+        </li>
         <li>
           <a href="tel:+967739181818" dir="ltr">
             739181818
