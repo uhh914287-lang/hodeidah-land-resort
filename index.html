@@ -599,16 +599,21 @@
   .footer-address{ display:flex; align-items:flex-start; gap:12px; font-size:14.5px; line-height:1.7; color: rgba(247,243,236,.8); margin-bottom:22px; }
   .footer-address svg{ width:19px; height:19px; flex-shrink:0; margin-top:2px; color: var(--turquoise); }
   .footer-address a{ color: var(--turquoise); font-weight:700; text-decoration: underline; text-underline-offset:3px; }
+  
+  /* --- قائمة الأرقام المحدثة (الرقم الرئيسي أصبح أولاً وبنفس التنسيق) --- */
   .footer-phones{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:14px; }
   .footer-phones li a{ display:flex; align-items:center; gap:10px; font-size:15px; color: rgba(247,243,236,.85); direction: ltr; justify-content:flex-end; transition: color .2s ease; }
   .footer-phones li a:hover{ color: var(--sand); }
   .footer-phones li a svg{ width:17px; height:17px; flex-shrink:0; color: var(--turquoise); }
+  
+  /* --- زر الواتساب المنفصل بالأسفل --- */
   .whatsapp-btn{
     display:inline-flex; align-items:center; gap:10px; background: #25D366; color: #08331c !important;
     font-weight:700; padding: 12px 22px; border-radius: 999px; font-size:14.5px; margin-top:24px; transition: transform .2s ease, box-shadow .2s ease;
   }
   .whatsapp-btn:hover{ transform: translateY(-2px); box-shadow: 0 8px 20px rgba(37,211,102,.3); }
   .whatsapp-btn svg{ width:18px; height:18px; }
+  
   .footer-links{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:13px; }
   .footer-links a{ font-size:14.5px; transition: color .2s ease; }
   .footer-links a:hover{ color: var(--sand); }
@@ -766,7 +771,7 @@
   </div>
 </section>
 
-<!-- ===================== حديدة هاوس السكني (استثمر / امتلك فيلتك) ===================== -->
+<!-- ===================== حديدة هاوس السكني ===================== -->
 <section class="invest-section" id="invest">
   <div class="invest-heading">
     <div class="eyebrow-line"><span class="rule"></span> حديدة هاوس السكني</div>
@@ -954,10 +959,10 @@
         </span>
       </div>
 
+      <!-- قائمة أرقام الاتصال (الرقم الرئيسي أصبح أولاً وبنفس التنسيق) -->
       <ul class="footer-phones">
         <li>
-          <a href="tel:+967780181818" dir="ltr" style="color: var(--gold); font-size: 16px; font-weight: 900;">
-            <span style="font-family: 'Tajawal', sans-serif; font-size: 13px; margin-right: 8px; color: var(--sand); font-weight: normal;">(الرئيسي)</span>
+          <a href="tel:+967780181818" dir="ltr">
             780181818
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.1-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.13.97.36 1.92.7 2.83a2 2 0 01-.45 2.1L8 9.9a16 16 0 006 6l1.27-1.27a2 2 0 012.1-.45c.91.34 1.86.57 2.83.7A2 2 0 0122 16.9z"/></svg>
           </a>
@@ -976,6 +981,7 @@
         </li>
       </ul>
 
+      <!-- زر تواصل واتساب المستقل -->
       <a class="whatsapp-btn" href="https://wa.me/967780181818" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5.1-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1112 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-2-1.2-.7-.7-1.2-1.5-1.4-1.7-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.2-.4.1-.2 0-.3 0-.4-.1-.1-.5-1.3-.7-1.8-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 4 3.5.6.2 1 .4 1.3.5.6.2 1.1.2 1.5.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.1-.4-.2z"/></svg>
           تواصل عبر واتساب — 780181818
