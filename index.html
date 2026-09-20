@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>حديدة لاند ريزورت</title>
+<meta name="description" content="منتجع حديدة لاند - إقامة فندقية فاخرة في الحديدة. شاليهات VIP، مدينة حديدة هاوس السكنية، وحديقة ترفيهية متكاملة.">
+<title>حديدة لاند ريزورت | إقامة فندقية فاخرة</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&family=Almarai:wght@300;400;700&display=swap" rel="stylesheet">
@@ -21,831 +22,161 @@
     padding-top: env(safe-area-inset-top, 0px);
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
-  html{ scroll-padding-top: env(safe-area-inset-top, 0px); }
+  html{ scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior: smooth;}
   *{ box-sizing: border-box; }
-  body{
-    margin:0;
-    font-family: 'Almarai', sans-serif;
-    background: var(--sand);
-    color: var(--ink);
-    overflow-x: hidden;
-  }
-  h1, h2, .display{
-    font-family: 'Tajawal', sans-serif;
-  }
+  body{ margin:0; font-family: 'Almarai', sans-serif; background: var(--sand); color: var(--ink); overflow-x: hidden; }
+  h1, h2, h3, .display{ font-family: 'Tajawal', sans-serif; }
   a{ text-decoration:none; color:inherit; }
   button{ font-family:inherit; cursor:pointer; }
 
   /* ===================== HEADER ===================== */
-  .site-header{
-    position: fixed;
-    top: env(safe-area-inset-top, 0px);
-    right:0; left:0;
-    z-index: 100;
-    height: var(--header-h);
-    display:flex;
-    align-items:center;
-    padding: 0 clamp(20px, 5vw, 64px);
-    transition: background .45s ease, box-shadow .45s ease, height .3s ease;
-  }
-  .site-header.scrolled{
-    background: rgba(8, 31, 48, 0.92);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 24px rgba(0,0,0,.18);
-    height: 68px;
-  }
+  .site-header{ position: fixed; top: env(safe-area-inset-top, 0px); right:0; left:0; z-index: 100; height: var(--header-h); display:flex; align-items:center; padding: 0 clamp(20px, 5vw, 64px); transition: background .45s ease, box-shadow .45s ease, height .3s ease; }
+  .site-header.scrolled{ background: rgba(8, 31, 48, 0.95); backdrop-filter: blur(10px); box-shadow: 0 8px 24px rgba(0,0,0,.18); height: 68px; }
+  .brand{ display:flex; align-items:center; gap:12px; font-weight:900; font-size: clamp(18px, 2vw, 22px); color: var(--sand); letter-spacing: .3px; }
+  .brand-mark{ width:40px; height:40px; flex-shrink:0; background: white; border-radius: 6px; padding: 2px;}
+  .brand small{ display:block; font-family:'Almarai',sans-serif; font-weight:400; font-size:11px; color: var(--gold); letter-spacing: 1px; }
 
-  .brand{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    font-family:'Tajawal', sans-serif;
-    font-weight:900;
-    font-size: clamp(18px, 2vw, 22px);
-    color: var(--sand);
-    letter-spacing: .3px;
-  }
-  .brand-mark{ width:40px; height:40px; flex-shrink:0; }
-  .brand small{
-    display:block;
-    font-family:'Almarai',sans-serif;
-    font-weight:400;
-    font-size:11px;
-    color: var(--gold);
-    letter-spacing: 1px;
-  }
-
-  .nav-links{
-    margin-inline-start:auto;
-    display:flex;
-    align-items:center;
-    gap: clamp(20px, 3vw, 40px);
-  }
-  .nav-links a{
-    color: var(--sand);
-    font-size:15.5px;
-    font-weight:700;
-    position:relative;
-    padding: 6px 0;
-  }
-  .nav-links a::after{
-    content:'';
-    position:absolute;
-    right:0; bottom:0;
-    width:0%; height:2px;
-    background: var(--coral);
-    transition: width .3s ease;
-  }
+  .nav-links{ margin-inline-start:auto; display:flex; align-items:center; gap: clamp(20px, 2vw, 30px); }
+  .nav-links a{ color: var(--sand); font-size:15px; font-weight:700; position:relative; padding: 6px 0; }
+  .nav-links a::after{ content:''; position:absolute; right:0; bottom:0; width:0%; height:2px; background: var(--coral); transition: width .3s ease; }
   .nav-links a:hover::after{ width:100%; }
 
-  .cta-btn{
-    background: var(--coral);
-    color: var(--sand);
-    border:none;
-    padding: 11px 26px;
-    border-radius: 999px;
-    font-weight:700;
-    font-size: 14.5px;
-    box-shadow: 0 6px 18px rgba(231,111,81,.35);
-    transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
-    white-space: nowrap;
-  }
-  .cta-btn:hover{
-    transform: translateY(-2px);
-    box-shadow: 0 10px 22px rgba(231,111,81,.45);
-    background: #d95f3e;
-  }
-
+  .cta-btn{ background: var(--coral); color: var(--sand) !important; border:none; padding: 11px 26px; border-radius: 999px; font-weight:700; font-size: 14.5px; box-shadow: 0 6px 18px rgba(231,111,81,.35); transition: transform .25s ease, box-shadow .25s ease, background .25s ease; white-space: nowrap; display: inline-block;}
+  .cta-btn:hover{ transform: translateY(-2px); box-shadow: 0 10px 22px rgba(231,111,81,.45); background: #d95f3e; }
   .nav-links .cta-btn{ margin-inline-start: 8px; }
 
-  /* Hamburger */
-  .hamburger{
-    display:none;
-    width:44px; height:44px;
-    border:none;
-    background:transparent;
-    position:relative;
-    margin-inline-start:auto;
-    z-index: 210;
-  }
-  .hamburger span{
-    position:absolute;
-    right:9px; left:9px;
-    height:2.5px;
-    background: var(--sand);
-    border-radius: 2px;
-    transition: transform .35s cubic-bezier(.6,.2,.2,1), opacity .25s ease, top .35s ease, background .3s ease;
-  }
-  .hamburger span:nth-child(1){ top:15px; }
-  .hamburger span:nth-child(2){ top:21px; }
-  .hamburger span:nth-child(3){ top:27px; }
+  /* Hamburger & Mobile Menu */
+  .hamburger{ display:none; width:44px; height:44px; border:none; background:transparent; position:relative; margin-inline-start:auto; z-index: 210; }
+  .hamburger span{ position:absolute; right:9px; left:9px; height:2.5px; background: var(--sand); border-radius: 2px; transition: 0.35s; }
+  .hamburger span:nth-child(1){ top:15px; } .hamburger span:nth-child(2){ top:21px; } .hamburger span:nth-child(3){ top:27px; }
   .hamburger.open span{ background: var(--sand); }
   .hamburger.open span:nth-child(1){ top:21px; transform: rotate(45deg); }
   .hamburger.open span:nth-child(2){ opacity:0; }
   .hamburger.open span:nth-child(3){ top:21px; transform: rotate(-45deg); }
 
-  /* Mobile full-screen menu — "wave reveal" */
-  .mobile-menu{
-    position: fixed;
-    inset:0;
-    z-index:190;
-    background: var(--navy-deep);
-    clip-path: circle(0px at calc(100% - 40px) 40px);
-    transition: clip-path .55s cubic-bezier(.6,.2,.2,1);
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    gap: 28px;
-    padding: env(safe-area-inset-top,0px) 24px env(safe-area-inset-bottom,0px);
-  }
-  .mobile-menu.open{
-    clip-path: circle(150% at calc(100% - 40px) 40px);
-  }
-  .mobile-menu a{
-    font-family:'Tajawal',sans-serif;
-    font-size: clamp(26px, 7vw, 34px);
-    font-weight:700;
-    color: var(--sand);
-    opacity:0;
-    transform: translateY(14px);
-    transition: opacity .4s ease, transform .4s ease;
-  }
+  .mobile-menu{ position: fixed; inset:0; z-index:190; background: var(--navy-deep); clip-path: circle(0px at calc(100% - 40px) 40px); transition: clip-path .55s cubic-bezier(.6,.2,.2,1); display:flex; flex-direction:column; align-items:center; justify-content:center; gap: 28px; }
+  .mobile-menu.open{ clip-path: circle(150% at calc(100% - 40px) 40px); }
+  .mobile-menu a{ font-family:'Tajawal',sans-serif; font-size: clamp(24px, 6vw, 30px); font-weight:700; color: var(--sand); opacity:0; transform: translateY(14px); transition: opacity .4s ease, transform .4s ease; }
   .mobile-menu.open a{ opacity:1; transform:none; }
-  .mobile-menu.open a:nth-child(1){ transition-delay:.15s; }
-  .mobile-menu.open a:nth-child(2){ transition-delay:.22s; }
-  .mobile-menu.open a:nth-child(3){ transition-delay:.29s; }
-  .mobile-menu.open a:nth-child(4){ transition-delay:.36s; }
-  .mobile-menu.open a:nth-child(5){ transition-delay:.43s; }
-  .mobile-menu .cta-btn{ margin-top:10px; }
 
   /* ===================== HERO ===================== */
-  .hero{
-    position: relative;
-    min-height: 100svh;
-    display:flex;
-    align-items:flex-end;
-    overflow: hidden;
-    background: linear-gradient(180deg, #12476b 0%, var(--navy) 55%, var(--navy-deep) 100%);
-  }
+  .hero{ position: relative; min-height: 100svh; display:flex; align-items:flex-end; overflow: hidden; background: linear-gradient(180deg, #12476b 0%, var(--navy) 55%, var(--navy-deep) 100%); }
+  .hero-photo-placeholder{ position:absolute; inset:0; background: linear-gradient(180deg, rgba(11,46,69,.15), rgba(8,31,48,.65)), url('hero.jpg') center/cover; opacity: 1; }
+  
+  .hero-sun{ position:absolute; top: 14%; left: 50%; width: clamp(140px, 22vw, 260px); height: clamp(140px, 22vw, 260px); border-radius:50%; background: radial-gradient(circle at 35% 35%, #ffe3b0, var(--gold) 60%, #b97f2f 100%); box-shadow: 0 0 90px 20px rgba(212,162,76,.35); will-change: transform; opacity: 0.9;}
+  .hero-layer{ position:absolute; right:-5%; left:-5%; will-change: transform; }
+  .layer-far{ bottom: 22%; opacity:.6; } .layer-mid{ bottom: 12%; opacity:.8; } .layer-near{ bottom: 0; }
 
-  /* Placeholder for the real cinematic photo/video, kept behind the parallax SVG layers */
-  .hero-photo-placeholder{
-    position:absolute; inset:0;
-    background: linear-gradient(180deg, rgba(11,46,69,.15), rgba(8,31,48,.65)),
-                repeating-linear-gradient(135deg, rgba(212,162,76,.08) 0 2px, transparent 2px 40px);
-    opacity: .55;
-  }
-  /* استبدل خلفية هذا العنصر (.hero-photo-placeholder) بصورة/فيديو سينمائي حقيقي لأرض/طبيعة منتجع حديدة لاند
-     (وليس صورة شاطئ مباشر لأن المنتجع ليس على الساحل) — يفضّل صورة عامة للأرض والمساحات الخضراء/الطبيعية عند الغروب،
-     مأخوذة من حساب إنستغرام h_d_land. ضع الصورة كـ background-image بجودة عالية مع الحفاظ على الطبقة الداكنة فوقها لوضوح النص. -->
+  .hero-content{ position:relative; z-index:5; width:100%; padding: 0 clamp(20px, 6vw, 90px) clamp(90px, 14vh, 150px); color: var(--sand); }
+  .eyebrow-line{ display:flex; align-items:center; gap:12px; margin-bottom: 22px; color: var(--gold); font-weight:700; font-size: 15px; }
+  .eyebrow-line .rule{ width:40px; height:2px; background: var(--gold); }
+  .hero-content h1{ font-size: clamp(34px, 6.2vw, 72px); line-height: 1.15; font-weight:900; margin: 0 0 22px; max-width: 18ch; text-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+  .hero-content h1 em{ font-style:normal; color: var(--turquoise); }
+  .hero-content p{ font-size: clamp(16px, 1.7vw, 19px); line-height:1.8; max-width: 46ch; color: rgba(247,243,236,.9); margin: 0 0 36px; font-weight:300; }
+  
+  .hero-actions{ display:flex; flex-wrap:wrap; gap:16px; align-items:center; }
+  .btn-ghost{ border: 1.5px solid rgba(247,243,236,.55); color: var(--sand); background: transparent; padding: 13px 30px; border-radius: 999px; font-weight:700; font-size:15px; transition: 0.3s; }
+  .btn-ghost:hover{ background: rgba(247,243,236,.1); border-color: var(--sand); }
 
-  .hero-sun{
-    position:absolute;
-    top: 14%;
-    left: 50%;
-    width: clamp(140px, 22vw, 260px);
-    height: clamp(140px, 22vw, 260px);
-    border-radius:50%;
-    background: radial-gradient(circle at 35% 35%, #ffe3b0, var(--gold) 60%, #b97f2f 100%);
-    box-shadow: 0 0 90px 20px rgba(212,162,76,.35);
-    will-change: transform;
-  }
+  .hero-scroll-cue{ position:absolute; bottom: 28px; left: 50%; transform: translateX(-50%); z-index:5; display:flex; flex-direction:column; align-items:center; gap:8px; color: rgba(247,243,236,.7); font-size:12px; }
+  .hero-scroll-cue .mouse{ width:22px; height:34px; border:1.5px solid rgba(247,243,236,.6); border-radius: 12px; position:relative; }
+  .hero-scroll-cue .mouse::after{ content:''; position:absolute; top:6px; left:50%; width:3px; height:6px; background: var(--gold); border-radius:2px; transform: translateX(-50%); animation: scrollDot 1.8s ease infinite; }
+  @keyframes scrollDot{ 0%{ opacity:1; top:6px; } 70%{ opacity:0; top:18px; } 100%{ opacity:0; top:6px; } }
 
-  .hero-layer{
-    position:absolute;
-    right:-5%; left:-5%;
-    will-change: transform;
-  }
-  .layer-far{ bottom: 22%; opacity:.5; }
-  .layer-mid{ bottom: 12%; opacity:.75; }
-  .layer-near{ bottom: 0; }
-
-  .hero-content{
-    position:relative;
-    z-index:5;
-    width:100%;
-    padding: 0 clamp(20px, 6vw, 90px) clamp(90px, 14vh, 150px);
-    color: var(--sand);
-  }
-  .eyebrow-line{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    margin-bottom: 22px;
-    color: var(--gold);
-    font-weight:700;
-    font-size: 15px;
-  }
-  .eyebrow-line .rule{
-    width:40px; height:2px;
-    background: var(--gold);
-  }
-
-  .hero-content h1{
-    font-size: clamp(34px, 6.2vw, 78px);
-    line-height: 1.12;
-    font-weight:900;
-    margin: 0 0 22px;
-    max-width: 18ch;
-  }
-  .hero-content h1 em{
-    font-style:normal;
-    color: var(--turquoise);
-  }
-  .hero-content p{
-    font-size: clamp(16px, 1.7vw, 19px);
-    line-height:1.8;
-    max-width: 46ch;
-    color: rgba(247,243,236,.86);
-    margin: 0 0 36px;
-    font-weight:300;
-  }
-
-  .hero-actions{
-    display:flex;
-    flex-wrap:wrap;
-    gap:16px;
-    align-items:center;
-  }
-  .btn-ghost{
-    border: 1.5px solid rgba(247,243,236,.55);
-    color: var(--sand);
-    background: transparent;
-    padding: 13px 30px;
-    border-radius: 999px;
-    font-weight:700;
-    font-size:15px;
-    transition: background .25s ease, border-color .25s ease;
-  }
-  .btn-ghost:hover{
-    background: rgba(247,243,236,.1);
-    border-color: var(--sand);
-  }
-
-  .hero-scroll-cue{
-    position:absolute;
-    bottom: 28px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index:5;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:8px;
-    color: rgba(247,243,236,.7);
-    font-size:12px;
-    letter-spacing:.5px;
-  }
-  .hero-scroll-cue .mouse{
-    width:22px; height:34px;
-    border:1.5px solid rgba(247,243,236,.6);
-    border-radius: 12px;
-    position:relative;
-  }
-  .hero-scroll-cue .mouse::after{
-    content:'';
-    position:absolute;
-    top:6px; left:50%;
-    width:3px; height:6px;
-    background: var(--gold);
-    border-radius:2px;
-    transform: translateX(-50%);
-    animation: scrollDot 1.8s ease infinite;
-  }
-  @keyframes scrollDot{
-    0%{ opacity:1; top:6px; }
-    70%{ opacity:0; top:18px; }
-    100%{ opacity:0; top:6px; }
-  }
-
-  /* Bottom wave divider separating hero from next section */
-  .hero-wave{
-    position:absolute;
-    bottom:-1px; left:0; right:0;
-    line-height:0;
-    z-index:4;
-  }
+  .hero-wave{ position:absolute; bottom:-1px; left:0; right:0; line-height:0; z-index:4; }
   .hero-wave svg{ width:100%; height: clamp(60px, 9vw, 130px); display:block; }
 
-  .next-section-stub{
-    background: var(--sand);
-    padding: 70px 24px;
-    text-align:center;
-    color: rgba(28,28,28,.4);
-    font-size:14px;
-  }
-
-  /* ===================== STAY / UNITS SECTION ===================== */
-  .stay-section{
-    background: var(--sand);
-    padding: clamp(60px, 9vw, 120px) clamp(20px, 6vw, 90px) clamp(80px, 10vw, 130px);
-  }
-
-  .stay-heading{
-    max-width: 640px;
-    margin: 0 0 56px;
-  }
+  /* ===================== STAY / UNITS ===================== */
+  .stay-section{ background: var(--sand); padding: clamp(60px, 9vw, 120px) clamp(20px, 6vw, 90px) 80px; }
+  .stay-heading{ max-width: 640px; margin: 0 0 56px; }
   .stay-heading .eyebrow-line{ color: var(--coral); }
   .stay-heading .eyebrow-line .rule{ background: var(--coral); }
-  .stay-heading h2{
-    font-size: clamp(30px, 4.2vw, 48px);
-    font-weight:900;
-    color: var(--navy);
-    line-height:1.2;
-    margin: 0 0 16px;
-  }
-  .stay-heading p{
-    font-size: 16.5px;
-    line-height:1.8;
-    color: rgba(28,28,28,.65);
-    max-width: 50ch;
-    font-weight:300;
-  }
+  .stay-heading h2{ font-size: clamp(30px, 4.2vw, 48px); font-weight:900; color: var(--navy); line-height:1.2; margin: 0 0 16px; }
+  .stay-heading p{ font-size: 16.5px; line-height:1.8; color: rgba(28,28,28,.65); max-width: 50ch; font-weight:300; }
 
-  .stay-grid{
-    display:grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: clamp(18px, 2vw, 28px);
-  }
-  .unit-card{
-    grid-column: span 12;
-    position:relative;
-    display:flex;
-    flex-direction:column;
-    border-top: 3px solid var(--gold);
-  }
+  .stay-grid{ display:grid; grid-template-columns: repeat(12, 1fr); gap: clamp(18px, 2vw, 28px); }
+  .unit-card{ grid-column: span 12; position:relative; display:flex; flex-direction:column; border-top: 3px solid var(--gold); background: white; border-radius: 0 0 8px 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
   .unit-card.featured{ border-top-color: var(--coral); }
-
-  .unit-media{
-    position:relative;
-    overflow:hidden;
-    aspect-ratio: 4 / 3;
-    background: linear-gradient(135deg, #E7DFCC 0%, #D9CDAE 100%);
-  }
+  .unit-media{ position:relative; overflow:hidden; aspect-ratio: 4 / 3; background: linear-gradient(135deg, #E7DFCC 0%, #D9CDAE 100%); }
   .unit-card.featured .unit-media{ aspect-ratio: 16 / 10; }
-
-  .unit-photo-placeholder{
-    position:absolute; inset:0;
-    background:
-      repeating-linear-gradient(45deg, rgba(11,46,69,.06) 0 2px, transparent 2px 26px),
-      linear-gradient(160deg, #E9E1CE, #CBBE9C);
-    transition: transform .8s cubic-bezier(.2,.6,.2,1);
-  }
+  .unit-photo-placeholder{ position:absolute; inset:0; background: url('vip.jpg') center/cover; transition: transform .8s; }
   .unit-card:hover .unit-photo-placeholder{ transform: scale(1.09); }
+  
+  .unit-tag{ position:absolute; top:18px; right:18px; background: rgba(8,31,48,.75); color: var(--sand); font-size:12.5px; font-weight:700; padding: 7px 16px; border-radius: 999px; backdrop-filter: blur(4px); z-index:3; }
+  
+  .unit-static-label{ padding: 20px; }
+  .unit-static-label h3{ font-size:22px; font-weight:900; color: var(--navy); margin:0 0 10px; }
+  .unit-static-label .price { color: var(--gold); font-size: 18px; font-weight: bold; display: block; margin-bottom: 15px; }
+  .unit-features-list { list-style: none; padding: 0; margin: 0 0 20px 0; }
+  .unit-features-list li { display: flex; align-items: start; gap: 8px; font-size: 14px; margin-bottom: 8px; color: #444; line-height: 1.6;}
+  .unit-features-list li strong { color: var(--navy); }
 
-  .unit-tag{
-    position:absolute;
-    top:18px; right:18px;
-    background: rgba(8,31,48,.75);
-    color: var(--sand);
-    font-size:12.5px;
-    font-weight:700;
-    padding: 7px 16px;
-    border-radius: 999px;
-    backdrop-filter: blur(4px);
-    z-index:3;
-  }
+  @media (min-width: 720px){ .unit-card.featured{ grid-column: span 7; } .unit-card.side-a{ grid-column: span 5; } .unit-card.side-b{ grid-column: 6 / span 7; } }
+  @media (min-width: 1080px){ .unit-card.featured{ grid-column: span 6; grid-row: span 2; } .unit-card.side-a{ grid-column: span 6; } .unit-card.side-b{ grid-column: span 6; } }
 
-  .unit-details-overlay{
-    position:absolute;
-    right:0; left:0; bottom:0;
-    z-index:2;
-    padding: 22px 22px 20px;
-    background: linear-gradient(0deg, rgba(8,31,48,.94) 0%, rgba(8,31,48,.75) 55%, rgba(8,31,48,0) 100%);
-    color: var(--sand);
-    transform: translateY(calc(100% - 64px));
-    transition: transform .5s cubic-bezier(.2,.7,.2,1);
-  }
-  .unit-card:hover .unit-details-overlay{ transform: translateY(0); }
-
-  .unit-details-overlay .unit-name-row{
-    display:flex;
-    align-items:baseline;
-    justify-content:space-between;
-    gap:12px;
-  }
-  .unit-details-overlay h3{
-    font-family:'Tajawal', sans-serif;
-    font-size: clamp(19px, 2.4vw, 24px);
-    font-weight:700;
-    margin:0;
-  }
-  .unit-details-overlay .price{
-    font-size:13.5px;
-    color: var(--gold);
-    font-weight:700;
-    white-space:nowrap;
-  }
-
-  .unit-features{
-    list-style:none;
-    margin: 16px 0 0;
-    padding: 0;
-    display:flex;
-    flex-wrap:wrap;
-    gap: 10px 18px;
-    opacity:0;
-    transform: translateY(8px);
-    transition: opacity .45s ease .1s, transform .45s ease .1s;
-  }
-  .unit-card:hover .unit-features{ opacity:1; transform:none; }
-  .unit-features li{
-    display:flex;
-    align-items:center;
-    gap:7px;
-    font-size:13.5px;
-    color: rgba(247,243,236,.88);
-  }
-  .unit-features svg{ width:16px; height:16px; flex-shrink:0; color: var(--turquoise); }
-
-  .unit-cta{
-    margin-top: 18px;
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    background: var(--coral);
-    color: var(--sand);
-    font-size:14px;
-    font-weight:700;
-    padding: 10px 22px;
-    border-radius: 999px;
-    opacity:0;
-    transform: translateY(8px);
-    transition: opacity .45s ease .16s, transform .45s ease .16s, background .25s ease;
-  }
-  .unit-card:hover .unit-cta{ opacity:1; transform:none; }
-  .unit-cta:hover{ background:#d95f3e; }
-
-  .unit-static-label{
-    padding: 16px 4px 0;
-  }
-  .unit-static-label h3{
-    font-family:'Tajawal', sans-serif;
-    font-size:19px;
-    font-weight:700;
-    color: var(--navy);
-    margin:0 0 4px;
-  }
-  .unit-static-label span{
-    font-size:13.5px;
-    color: rgba(28,28,28,.55);
-  }
-
-  @media (min-width: 720px){
-    .unit-card.featured{ grid-column: span 7; }
-    .unit-card.side-a{ grid-column: span 5; }
-    .unit-card.side-b{ grid-column: 6 / span 7; }
-  }
-  @media (min-width: 1080px){
-    .unit-card.featured{ grid-column: span 6; grid-row: span 2; }
-    .unit-card.side-a{ grid-column: span 6; }
-    .unit-card.side-b{ grid-column: span 6; }
-  }
-
-  @media (hover: none){
-    .unit-details-overlay{ transform: translateY(0); }
-    .unit-features, .unit-cta{ opacity:1; transform:none; }
-    .unit-photo-placeholder{ transform:none !important; }
-  }
-
-  /* ===================== INVEST IN LAND SECTION ===================== */
-  .invest-section{
-    background: var(--navy-deep);
-    color: var(--sand);
-    padding: clamp(70px, 9vw, 130px) clamp(20px, 6vw, 90px);
-    position: relative;
-    overflow: hidden;
-  }
-  .invest-section::before{
-    content:'';
-    position:absolute;
-    inset:0;
-    background: repeating-linear-gradient(180deg, transparent 0 78px, rgba(212,162,76,.05) 78px 79px);
-    pointer-events:none;
-  }
-
-  .invest-heading{
-    max-width: 680px;
-    margin: 0 0 52px;
-    position:relative;
-  }
+  /* ===================== HODEIDA HOUSE (INVEST) ===================== */
+  .invest-section{ background: var(--navy-deep); color: var(--sand); padding: clamp(70px, 9vw, 130px) clamp(20px, 6vw, 90px); position: relative; overflow: hidden; }
+  .invest-section::before{ content:''; position:absolute; inset:0; background: repeating-linear-gradient(180deg, transparent 0 78px, rgba(212,162,76,.05) 78px 79px); pointer-events:none; }
+  .invest-heading{ max-width: 680px; margin: 0 0 52px; position:relative; }
   .invest-heading .eyebrow-line{ color: var(--turquoise); }
   .invest-heading .eyebrow-line .rule{ background: var(--turquoise); }
-  .invest-heading h2{
-    font-size: clamp(30px, 4.2vw, 48px);
-    font-weight:900;
-    line-height:1.2;
-    margin: 0 0 16px;
-  }
-  .invest-heading p{
-    font-size:16.5px;
-    line-height:1.8;
-    color: rgba(247,243,236,.7);
-    max-width: 54ch;
-    font-weight:300;
-  }
+  .invest-heading h2{ font-size: clamp(30px, 4.2vw, 48px); font-weight:900; line-height:1.2; margin: 0 0 16px; }
+  .invest-heading p{ font-size:16.5px; line-height:1.8; color: rgba(247,243,236,.8); max-width: 54ch; font-weight:300; }
 
-  .invest-layout{
-    display:grid;
-    grid-template-columns: 1fr;
-    gap: 44px;
-    position:relative;
-    align-items:start;
-  }
+  .invest-layout{ display:grid; grid-template-columns: 1fr; gap: 44px; position:relative; align-items:start; }
+  .masterplan{ position:relative; border-radius: 8px; overflow:hidden; aspect-ratio: 4 / 3; background: linear-gradient(160deg, #163C58, #0E2C43); border: 2px solid rgba(255,255,255,0.1);}
+  .masterplan-photo-placeholder{ position:absolute; inset:0; background: repeating-linear-gradient(90deg, rgba(247,243,236,.05) 0 1px, transparent 1px 48px), repeating-linear-gradient(0deg, rgba(247,243,236,.05) 0 1px, transparent 1px 48px), linear-gradient(150deg, #1B4763, #0C2334); }
+  
+  .plot-grid{ position:absolute; inset: 8%; display:grid; grid-template-columns: repeat(5, 1fr); grid-template-rows: repeat(4, 1fr); gap: 6px; }
+  .plot{ position:relative; border: 1.5px dashed rgba(247,243,236,.25); border-radius: 3px; cursor: default; transition: 0.3s; }
+  .plot[data-status="sold"]{ background: rgba(28,28,28,.4); border-style: solid; border-color: rgba(247,243,236,.12); }
+  .plot[data-status="reserved"]{ background: rgba(212,162,76,.2); border-color: rgba(212,162,76,.5); }
+  .plot[data-status="available"]{ background: rgba(44,166,164,.15); border-color: rgba(44,166,164,.6); cursor: pointer; }
+  .plot[data-status="available"]:hover{ transform: scale(1.12); z-index: 4; border-color: var(--turquoise); background: rgba(44,166,164,.4); box-shadow: 0 0 20px rgba(44,166,164,.5); }
 
-  .masterplan{
-    position:relative;
-    border-radius: 6px;
-    overflow:hidden;
-    aspect-ratio: 4 / 3;
-    background: linear-gradient(160deg, #163C58, #0E2C43);
-  }
-  .masterplan-photo-placeholder{
-    position:absolute; inset:0;
-    background:
-      repeating-linear-gradient(90deg, rgba(247,243,236,.05) 0 1px, transparent 1px 48px),
-      repeating-linear-gradient(0deg, rgba(247,243,236,.05) 0 1px, transparent 1px 48px),
-      linear-gradient(150deg, #1B4763, #0C2334);
-  }
-  /* استبدل خلفية .masterplan-photo-placeholder بصورة المخطط الهندسي الجوي الحقيقي للأراضي
-     (تصوير جوي/درون من فيسبوك أو إنستغرام hodeida.land.resort) — يفضّل صورة علوية واضحة الحدود
-     ليتماشى الشكل الشبكي التالي (طبقة القطع) مع حدود الأرض الفعلية بدقة لاحقاً -->
+  .plot-tooltip{ position:absolute; bottom: calc(100% + 8px); right:50%; transform: translateX(50%) translateY(4px); background: var(--navy); border: 1px solid var(--gold); color: var(--sand); font-size: 12px; font-weight:bold; padding: 8px 12px; border-radius: 6px; white-space: nowrap; opacity:0; pointer-events:none; transition: 0.3s; z-index: 5; }
+  .plot[data-status="available"]:hover .plot-tooltip{ opacity:1; transform: translateX(50%) translateY(0); }
 
-  .plot-grid{
-    position:absolute;
-    inset: 8%;
-    display:grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 6px;
-  }
-  .plot{
-    position:relative;
-    border: 1.5px dashed rgba(247,243,236,.25);
-    border-radius: 3px;
-    cursor: default;
-    transition: transform .3s ease, border-color .3s ease, background .3s ease;
-  }
-  .plot[data-status="sold"]{
-    background: rgba(28,28,28,.35);
-    border-style: solid;
-    border-color: rgba(247,243,236,.12);
-  }
-  .plot[data-status="reserved"]{
-    background: rgba(212,162,76,.14);
-    border-color: rgba(212,162,76,.45);
-  }
-  .plot[data-status="available"]{
-    background: rgba(44,166,164,.12);
-    border-color: rgba(44,166,164,.55);
-    cursor: pointer;
-  }
-  .plot[data-status="available"]:hover,
-  .plot[data-status="available"].active{
-    transform: scale(1.12);
-    z-index: 4;
-    border-color: var(--turquoise);
-    background: rgba(44,166,164,.32);
-    box-shadow: 0 0 22px 4px rgba(44,166,164,.45);
-  }
-
-  .plot-tooltip{
-    position:absolute;
-    bottom: calc(100% + 8px);
-    right:50%;
-    transform: translateX(50%) translateY(4px);
-    background: var(--navy-deep);
-    border: 1px solid rgba(247,243,236,.15);
-    color: var(--sand);
-    font-size: 11.5px;
-    line-height:1.5;
-    padding: 8px 12px;
-    border-radius: 6px;
-    white-space: nowrap;
-    opacity:0;
-    pointer-events:none;
-    transition: opacity .25s ease, transform .25s ease;
-    z-index: 5;
-  }
-  .plot[data-status="available"]:hover .plot-tooltip,
-  .plot[data-status="available"].active .plot-tooltip{
-    opacity:1;
-    transform: translateX(50%) translateY(0);
-  }
-
-  .plan-legend{
-    position:absolute;
-    bottom: 16px;
-    right: 16px;
-    left:16px;
-    display:flex;
-    flex-wrap:wrap;
-    gap: 16px;
-    font-size:12px;
-    color: rgba(247,243,236,.75);
-    z-index:3;
-  }
+  .plan-legend{ position:absolute; bottom: 16px; right: 16px; left:16px; display:flex; flex-wrap:wrap; gap: 16px; font-size:12px; color: rgba(247,243,236,.8); z-index:3; font-weight: bold;}
   .plan-legend span{ display:flex; align-items:center; gap:6px; }
-  .plan-legend i{ width:10px; height:10px; border-radius:2px; display:inline-block; }
-  .legend-available{ background: rgba(44,166,164,.7); }
-  .legend-reserved{ background: rgba(212,162,76,.7); }
-  .legend-sold{ background: rgba(247,243,236,.25); }
+  .plan-legend i{ width:12px; height:12px; border-radius:3px; display:inline-block; }
+  .legend-available{ background: rgba(44,166,164,.8); }
+  .legend-reserved{ background: rgba(212,162,76,.8); }
+  .legend-sold{ background: rgba(28,28,28,.6); border: 1px solid rgba(255,255,255,0.2);}
 
-  .invest-values{
-    display:flex;
-    flex-direction:column;
-  }
-  .value-item{
-    display:flex;
-    gap:18px;
-    padding: 24px 0;
-    border-top: 1px solid rgba(247,243,236,.14);
-  }
+  .invest-values{ display:flex; flex-direction:column; }
+  .value-item{ display:flex; gap:18px; padding: 24px 0; border-top: 1px solid rgba(247,243,236,.14); }
   .invest-values .value-item:first-child{ border-top:none; padding-top:0; }
-  .value-icon{
-    flex-shrink:0;
-    width:44px; height:44px;
-    border-radius:50%;
-    background: rgba(212,162,76,.12);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
-  .value-icon svg{ width:22px; height:22px; color: var(--gold); }
-  .value-text h3{
-    font-family:'Tajawal',sans-serif;
-    font-size:18px;
-    font-weight:700;
-    margin:0 0 6px;
-  }
-  .value-text p{
-    font-size:14.5px;
-    line-height:1.75;
-    color: rgba(247,243,236,.65);
-    margin:0;
-    font-weight:300;
-  }
+  .value-icon{ flex-shrink:0; width:44px; height:44px; border-radius:50%; background: rgba(212,162,76,.15); display:flex; align-items:center; justify-content:center; font-size: 20px;}
+  .value-text h3{ font-size:20px; font-weight:900; margin:0 0 8px; color: var(--gold);}
+  .value-text p{ font-size:15px; line-height:1.7; color: rgba(247,243,236,.8); margin:0; }
 
-  .pulse-cta-wrap{
-    margin-top: 34px;
-    display:flex;
-    justify-content:flex-start;
-  }
-  .pulse-cta{
-    position:relative;
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    background: var(--coral);
-    color: var(--sand);
-    border:none;
-    font-size:15.5px;
-    font-weight:700;
-    padding: 16px 34px;
-    border-radius: 999px;
-    isolation: isolate;
-  }
-  .pulse-cta::before{
-    content:'';
-    position:absolute;
-    inset:0;
-    border-radius:999px;
-    background: var(--coral);
-    z-index:-1;
-    animation: ctaPulse 2.4s ease-out infinite;
-  }
-  @keyframes ctaPulse{
-    0%{ transform: scale(1); opacity:.55; }
-    75%{ transform: scale(1.55); opacity:0; }
-    100%{ transform: scale(1.55); opacity:0; }
-  }
-  .pulse-cta:hover{ background:#d95f3e; }
-  .pulse-cta:hover::before{ background:#d95f3e; }
+  @media (min-width: 900px){ .invest-layout{ grid-template-columns: 1.35fr 1fr; gap: 60px; } }
 
-  @media (min-width: 900px){
-    .invest-layout{
-      grid-template-columns: 1.35fr 1fr;
-      gap: 60px;
-    }
-  }
+  /* ===================== HODEIDA PARK & EXPERIENCES (BENTO) ===================== */
+  .bento-section{ background: var(--sand); padding: clamp(70px, 9vw, 100px) clamp(20px, 6vw, 90px); }
+  .bento-section.dark { background: var(--navy-deep); color: var(--sand); }
+  .bento-section.dark .experiences-heading h2 { color: var(--sand); }
+  .bento-section.dark .experiences-heading p { color: rgba(255,255,255,0.7); }
+  
+  .experiences-heading{ max-width: 680px; margin: 0 0 52px; }
+  .experiences-heading h2{ font-size: clamp(30px, 4.2vw, 48px); font-weight:900; line-height:1.2; margin: 0 0 16px; }
+  .experiences-heading p{ font-size:16.5px; line-height:1.8; color: #555; max-width: 52ch; }
 
-  @media (hover: none){
-    .plot[data-status="available"]:hover{ transform:none; box-shadow:none; background: rgba(44,166,164,.12); border-color: rgba(44,166,164,.55); }
-  }
-
-  /* ===================== EXPERIENCES — BENTO SECTION ===================== */
-  .experiences-section{
-    background: var(--sand);
-    padding: clamp(70px, 9vw, 130px) clamp(20px, 6vw, 90px);
-  }
-  .experiences-heading{
-    max-width: 640px;
-    margin: 0 0 52px;
-  }
-  .experiences-heading .eyebrow-line{ color: var(--gold); }
-  .experiences-heading .eyebrow-line .rule{ background: var(--gold); }
-  .experiences-heading h2{
-    font-size: clamp(30px, 4.2vw, 48px);
-    font-weight:900;
-    color: var(--navy);
-    line-height:1.2;
-    margin: 0 0 16px;
-  }
-  .experiences-heading p{
-    font-size:16.5px;
-    line-height:1.8;
-    color: rgba(28,28,28,.65);
-    max-width: 52ch;
-    font-weight:300;
-  }
-
-  .bento-grid{
-    display:grid;
-    grid-template-columns: 1fr;
-    gap: clamp(14px, 1.6vw, 20px);
-  }
-  .bento-tile{
-    position:relative;
-    overflow:hidden;
-    border-radius: 8px;
-    min-height: 260px;
-    isolation:isolate;
-  }
-  .bento-tile.tile-featured{ min-height: 340px; }
-
-  .bento-photo-placeholder{
-    position:absolute; inset:0;
-    transition: transform 1s cubic-bezier(.2,.6,.2,1);
-    z-index:1;
-  }
+  .bento-grid{ display:grid; grid-template-columns: 1fr; gap: 15px; }
+  .bento-tile{ position:relative; overflow:hidden; border-radius: 10px; min-height: 280px; isolation:isolate; box-shadow: 0 5px 20px rgba(0,0,0,0.05);}
+  .bento-tile.tile-featured{ min-height: 380px; }
+  .bento-photo-placeholder{ position:absolute; inset:0; transition: transform 1s cubic-bezier(.2,.6,.2,1); z-index:1; background-size: cover; background-position: center;}
   .bento-tile:hover .bento-photo-placeholder{ transform: scale(1.1); }
-
-  .bento-tile.tile-1 .bento-photo-placeholder{ background: linear-gradient(150deg, #12566a 0%, #0B2E45 70%); }
-  .bento-tile.tile-2 .bento-photo-placeholder{ background: linear-gradient(150deg, #3a7c79 0%, #1f4e4c 75%); }
-  .bento-tile.tile-3 .bento-photo-placeholder{ background: linear-gradient(150deg, #c98a3a 0%, #8a5c22 75%); }
-  .bento-tile.tile-4 .bento-photo-placeholder{ background: linear-gradient(150deg, #a85440 0%, #6e352a 75%); }
-
-  .bento-scrim{
-    position:absolute; inset:0;
-    z-index:2;
-    background: linear-gradient(0deg, rgba(8,31,48,.92) 0%, rgba(8,31,48,.35) 45%, rgba(8,31,48,.05) 75%);
-  }
-
-  .bento-tag{
-    position:absolute;
-    top:16px; right:16px;
-    z-index:3;
-    font-size:11.5px;
-    font-weight:700;
-    color: var(--sand);
-    background: rgba(247,243,236,.14);
-    border: 1px solid rgba(247,243,236,.3);
-    padding: 5px 13px;
-    border-radius: 999px;
-    backdrop-filter: blur(3px);
-  }
-
-  .bento-info{
-    position:absolute;
-    right:0; left:0; bottom:0;
-    z-index:3;
-    padding: 22px;
-    color: var(--sand);
-  }
-  .bento-info h3{
-    font-family:'Tajawal',sans-serif;
-    font-size: clamp(19px, 2vw, 23px);
-    font-weight:700;
-    margin: 0 0 8px;
-  }
-  .bento-info p{
-    font-size:14px;
-    line-height:1.7;
-    color: rgba(247,243,236,.8);
-    margin:0;
-    max-width: 34ch;
-    font-weight:300;
-    max-height:0;
-    opacity:0;
-    overflow:hidden;
-    transition: max-height .5s ease, opacity .4s ease .05s;
-  }
-  .bento-tile:hover .bento-info p{
-    max-height: 100px;
-    opacity:1;
-  }
-
-  @media (hover: none){
-    .bento-info p{ max-height:100px; opacity:1; }
-    .bento-photo-placeholder{ transform:none !important; }
-  }
+  .bento-scrim{ position:absolute; inset:0; z-index:2; background: linear-gradient(0deg, rgba(8,31,48,.95) 0%, rgba(8,31,48,.3) 50%, rgba(8,31,48,.05) 100%); }
+  
+  .bento-tag{ position:absolute; top:16px; right:16px; z-index:3; font-size:12px; font-weight:900; color: var(--sand); background: var(--coral); padding: 5px 15px; border-radius: 999px; box-shadow: 0 2px 10px rgba(231,111,81,0.4);}
+  .bento-info{ position:absolute; right:0; left:0; bottom:0; z-index:3; padding: 25px; color: var(--sand); }
+  .bento-info h3{ font-size: 22px; font-weight:900; margin: 0 0 10px; color: var(--gold);}
+  .bento-info p{ font-size:15px; line-height:1.7; color: rgba(247,243,236,.9); margin:0; }
 
   @media (min-width: 860px){
-    .bento-grid{
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(2, minmax(200px, 1fr));
-    }
+    .bento-grid{ grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, minmax(200px, 1fr)); }
     .bento-tile.tile-1{ grid-column: 1 / span 2; grid-row: 1 / span 2; }
     .bento-tile.tile-2{ grid-column: 3 / span 1; grid-row: 1; }
     .bento-tile.tile-3{ grid-column: 4 / span 1; grid-row: 1; }
@@ -855,64 +186,18 @@
   }
 
   /* ===================== MINI GALLERY ===================== */
-  .gallery-section{
-    background: var(--sand);
-    padding: clamp(70px, 9vw, 120px) clamp(20px, 6vw, 90px);
-  }
-  .gallery-heading{
-    max-width: 600px;
-    margin: 0 0 44px;
-  }
-  .gallery-heading .eyebrow-line{ color: var(--navy); }
-  .gallery-heading .eyebrow-line .rule{ background: var(--navy); }
-  .gallery-heading h2{
-    font-size: clamp(28px, 3.8vw, 42px);
-    font-weight:900;
-    color: var(--navy);
-    line-height:1.2;
-    margin:0;
-  }
+  .gallery-section{ background: var(--sand); padding: 60px clamp(20px, 6vw, 90px) 100px; }
+  .gallery-heading{ max-width: 600px; margin: 0 0 40px; }
+  .gallery-heading h2{ font-size: clamp(28px, 3.8vw, 42px); font-weight:900; color: var(--navy); margin:0; }
 
-  .gallery-grid{
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 160px;
-    gap: 12px;
-  }
-  .gallery-item{
-    position:relative;
-    overflow:hidden;
-    border-radius: 6px;
-  }
-  .gallery-photo-placeholder{
-    position:absolute; inset:0;
-    transition: transform .7s cubic-bezier(.2,.6,.2,1);
-  }
+  .gallery-grid{ display:grid; grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; gap: 12px; }
+  .gallery-item{ position:relative; overflow:hidden; border-radius: 8px; }
+  .gallery-photo-placeholder{ position:absolute; inset:0; transition: transform .7s; background-size: cover; background-position: center;}
   .gallery-item:hover .gallery-photo-placeholder{ transform: scale(1.08); }
-
-  .gallery-item.g1 .gallery-photo-placeholder{ background: linear-gradient(150deg,#1c4f6e,#0B2E45); }
-  .gallery-item.g2 .gallery-photo-placeholder{ background: linear-gradient(150deg,#3f8f7d,#1f4e4c); }
-  .gallery-item.g3 .gallery-photo-placeholder{ background: linear-gradient(150deg,#0a1622,#081F30); }
-  .gallery-item.g4 .gallery-photo-placeholder{ background: linear-gradient(150deg,#cf9a4e,#8a5c22); }
-  .gallery-item.g5 .gallery-photo-placeholder{ background: linear-gradient(150deg,#4a6f5c,#26402f); }
-  .gallery-item.g6 .gallery-photo-placeholder{ background: linear-gradient(150deg,#b5624a,#6e352a); }
-
-  .gallery-caption{
-    position:absolute;
-    right:0; left:0; bottom:0;
-    z-index:2;
-    padding: 12px 14px;
-    font-size:12.5px;
-    font-weight:700;
-    color: var(--sand);
-    background: linear-gradient(0deg, rgba(8,31,48,.85), rgba(8,31,48,0));
-  }
-
-  .gallery-item.g1{ grid-column: span 2; grid-row: span 2; }
-  .gallery-item.g4{ grid-column: span 2; }
+  .gallery-caption{ position:absolute; right:0; left:0; bottom:0; z-index:2; padding: 20px 15px 12px; font-size:14px; font-weight:900; color: var(--sand); background: linear-gradient(0deg, rgba(8,31,48,.9), transparent); }
 
   @media (min-width: 720px){
-    .gallery-grid{ grid-template-columns: repeat(4, 1fr); grid-auto-rows: 150px; }
+    .gallery-grid{ grid-template-columns: repeat(4, 1fr); grid-auto-rows: 200px; }
     .gallery-item.g1{ grid-column: span 2; grid-row: span 2; }
     .gallery-item.g2{ grid-column: span 2; grid-row: span 1; }
     .gallery-item.g3{ grid-column: span 1; grid-row: span 2; }
@@ -922,135 +207,37 @@
   }
 
   /* ===================== FOOTER / CONTACT ===================== */
-  .site-footer{
-    background: var(--navy-deep);
-    color: rgba(247,243,236,.75);
-    padding: clamp(60px, 8vw, 100px) clamp(20px, 6vw, 90px) 0;
-  }
-
-  .footer-top{
-    display:grid;
-    grid-template-columns: 1fr;
-    gap: 44px;
-    padding-bottom: 56px;
-    border-bottom: 1px solid rgba(247,243,236,.12);
-  }
-
+  .site-footer{ background: var(--navy-deep); color: rgba(247,243,236,.75); padding: clamp(60px, 8vw, 100px) clamp(20px, 6vw, 90px) 0; }
+  .footer-top{ display:grid; grid-template-columns: 1fr; gap: 44px; padding-bottom: 56px; border-bottom: 1px solid rgba(247,243,236,.1); }
   .footer-brand .brand{ color: var(--sand); margin-bottom:16px; }
-  .footer-brand p{
-    max-width: 40ch;
-    font-size:14.5px;
-    line-height:1.8;
-    font-weight:300;
-    color: rgba(247,243,236,.6);
-  }
-  .footer-social{
-    display:flex;
-    gap:12px;
-    margin-top:20px;
-  }
-  .footer-social a{
-    width:40px; height:40px;
-    border-radius:50%;
-    border:1px solid rgba(247,243,236,.22);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    transition: background .25s ease, border-color .25s ease, transform .25s ease;
-  }
-  .footer-social a svg{ width:17px; height:17px; color: var(--sand); }
-  .footer-social a:hover{
-    background: var(--coral);
-    border-color: var(--coral);
-    transform: translateY(-3px);
-  }
-
-  .footer-col h4{
-    font-family:'Tajawal',sans-serif;
-    font-size:15px;
-    color: var(--gold);
-    font-weight:700;
-    margin: 0 0 20px;
-  }
-
-  .footer-address{
-    display:flex;
-    align-items:flex-start;
-    gap:12px;
-    font-size:14.5px;
-    line-height:1.7;
-    color: rgba(247,243,236,.8);
-    margin-bottom:22px;
-  }
-  .footer-address svg{ width:19px; height:19px; flex-shrink:0; margin-top:2px; color: var(--turquoise); }
-  .footer-address a{
-    color: var(--turquoise);
-    font-weight:700;
-    text-decoration: underline;
-    text-underline-offset:3px;
-  }
+  .footer-brand p{ max-width: 40ch; font-size:15px; line-height:1.8; font-weight:300; color: rgba(255,255,255,.6); }
+  
+  .footer-col h4{ font-family:'Tajawal',sans-serif; font-size:18px; color: var(--gold); font-weight:900; margin: 0 0 20px; }
+  .footer-address{ display:flex; align-items:flex-start; gap:12px; font-size:15px; line-height:1.7; color: rgba(247,243,236,.8); margin-bottom:22px; }
+  .footer-address svg{ width:22px; height:22px; flex-shrink:0; color: var(--turquoise); }
 
   .footer-phones{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:12px; }
-  .footer-phones li a{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-size:15px;
-    color: rgba(247,243,236,.85);
-    direction: ltr;
-    justify-content:flex-end;
-    transition: color .2s ease;
-  }
-  .footer-phones li a:hover{ color: var(--sand); }
-  .footer-phones li a svg{ width:17px; height:17px; flex-shrink:0; color: var(--turquoise); }
+  .footer-phones li a{ display:flex; align-items:center; gap:10px; font-size:16px; color: rgba(247,243,236,.9); direction: ltr; justify-content:flex-end; font-weight: bold;}
+  .footer-phones li a:hover{ color: var(--gold); }
+  .footer-phones li a svg{ width:18px; height:18px; flex-shrink:0; color: var(--turquoise); }
 
-  .whatsapp-btn{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    background: #25D366;
-    color: #08331c !important;
-    font-weight:700;
-    padding: 10px 20px;
-    border-radius: 999px;
-    font-size:14.5px;
-    margin-top:6px;
-    transition: transform .2s ease, box-shadow .2s ease;
-  }
-  .whatsapp-btn:hover{
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(37,211,102,.3);
-  }
-  .whatsapp-btn svg{ width:18px; height:18px; }
+  .whatsapp-btn{ display:inline-flex; align-items:center; gap:10px; background: #25D366; color: white !important; font-weight:900; padding: 12px 24px; border-radius: 999px; font-size:15px; margin-top:15px; transition: 0.3s; }
+  .whatsapp-btn:hover{ transform: translateY(-3px); box-shadow: 0 8px 20px rgba(37,211,102,.4); }
+  .whatsapp-btn svg{ width:20px; height:20px; fill: currentColor;}
 
   .footer-links{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:13px; }
-  .footer-links a{ font-size:14.5px; transition: color .2s ease; }
-  .footer-links a:hover{ color: var(--sand); }
+  .footer-links a{ font-size:15px; transition: 0.2s; }
+  .footer-links a:hover{ color: var(--gold); padding-right: 5px;}
 
-  .footer-bottom{
-    padding: 26px 0;
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-    align-items:center;
-    justify-content:space-between;
-    font-size:13px;
-    color: rgba(247,243,236,.45);
-  }
+  .footer-bottom{ padding: 26px 0; display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between; font-size:14px; color: rgba(255,255,255,.4); }
 
-  @media (min-width: 780px){
-    .footer-top{ grid-template-columns: 1.4fr 1fr 1fr; }
-  }
+  /* Floating WA */
+  .floating-wa { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white !important; border-radius: 50px; padding: 14px 28px; z-index: 999; display: flex; align-items: center; gap: 12px; font-weight: 900; font-size: 16px; box-shadow: 0 8px 25px rgba(37,211,102,0.4); transition: 0.3s; }
+  .floating-wa:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 12px 30px rgba(37,211,102,0.6);}
+  .floating-wa svg { width: 22px; height: 22px; fill: currentColor;}
 
-  @media (max-width: 880px){
-    .nav-links{ display:none; }
-    .hamburger{ display:block; }
-    .hero-content{ padding-bottom: 120px; }
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    *{ animation-duration: .001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
-  }
+  @media (min-width: 780px){ .footer-top{ grid-template-columns: 1.5fr 1fr 1fr; } }
+  @media (max-width: 880px){ .nav-links{ display:none; } .hamburger{ display:block; } .hero-content{ padding-bottom: 120px; } }
 </style>
 </head>
 <body>
@@ -1066,12 +253,12 @@
   </a>
 
   <nav class="nav-links">
-    <a href="#stay">الإقامة</a>
-    <a href="#invest">استثمر في الأرض</a>
-    <a href="#experiences">التجارب</a>
+    <a href="#stay">الإقامة الفاخرة</a>
+    <a href="#hodeida-house">حديدة هاوس</a>
+    <a href="#park">حديقة المنتجع</a>
+    <a href="#experiences">التجارب والخدمات</a>
     <a href="#gallery">المعرض</a>
-    <a href="#contact">تواصل معنا</a>
-    <a href="#book" class="cta-btn">احجز الآن</a>
+    <a href="https://wa.me/967780181818" class="cta-btn" target="_blank">احجز الآن</a>
   </nav>
 
   <button class="hamburger" id="hamburgerBtn" aria-label="فتح القائمة" aria-expanded="false">
@@ -1080,43 +267,37 @@
 </header>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#stay">الإقامة</a>
-  <a href="#invest">استثمر في الأرض</a>
-  <a href="#experiences">التجارب</a>
+  <a href="#stay">الإقامة الفاخرة</a>
+  <a href="#hodeida-house">حديدة هاوس</a>
+  <a href="#park">حديقة المنتجع</a>
+  <a href="#experiences">التجارب والخدمات</a>
   <a href="#gallery">المعرض</a>
-  <a href="#contact">تواصل معنا</a>
-  <a href="#book" class="cta-btn">احجز الآن</a>
+  <a href="https://wa.me/967780181818" class="cta-btn" target="_blank">واتساب @Hodeidahland</a>
 </div>
 
 <!-- ===================== HERO ===================== -->
 <section class="hero" id="home">
-
   <div class="hero-photo-placeholder"></div>
-
   <div class="hero-sun" id="heroSun"></div>
 
-  <!-- طبقة بعيدة: تلال/كثبان رملية -->
-  <svg class="hero-layer layer-far" id="layerFar" viewBox="0 0 1440 260" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:26vh;">
+  <!-- SVG Layers -->
+  <svg class="hero-layer layer-far" id="layerFar" viewBox="0 0 1440 260" preserveAspectRatio="none" style="height:26vh;">
     <path d="M0,180 C240,100 380,220 620,150 C860,80 1000,200 1200,140 C1320,105 1400,150 1440,130 L1440,260 L0,260 Z" fill="#123A56"/>
   </svg>
-
-  <!-- طبقة وسطى: أرض/نخيل متموج -->
-  <svg class="hero-layer layer-mid" id="layerMid" viewBox="0 0 1440 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:20vh;">
+  <svg class="hero-layer layer-mid" id="layerMid" viewBox="0 0 1440 220" preserveAspectRatio="none" style="height:20vh;">
     <path d="M0,160 C200,90 340,190 560,120 C780,50 920,170 1160,110 C1300,75 1380,120 1440,100 L1440,220 L0,220 Z" fill="#0E3350"/>
   </svg>
-
-  <!-- طبقة قريبة: أرض المقدمة -->
-  <svg class="hero-layer layer-near" id="layerNear" viewBox="0 0 1440 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:14vh;">
+  <svg class="hero-layer layer-near" id="layerNear" viewBox="0 0 1440 160" preserveAspectRatio="none" style="height:14vh;">
     <path d="M0,120 C260,60 420,140 700,90 C980,40 1160,130 1440,80 L1440,160 L0,160 Z" fill="var(--navy-deep)"/>
   </svg>
 
   <div class="hero-content">
-    <div class="eyebrow-line"><span class="rule"></span> بوابة الأحمر — الحديدة، اليمن</div>
-    <h1>حيث تلتقي <em>الأرض</em><br>بحكاية البحر الأحمر</h1>
-    <p>مساحات طبيعية أصيلة، وفرص استثمارية نادرة، وتجربة ضيافة لا تشبه أي مكان آخر على الساحل الغربي.</p>
+    <div class="eyebrow-line"><span class="rule"></span> الخيار الأول للإقامة والاستثمار — الحديدة</div>
+    <h1>فخامة <em>الإقامة</em><br>وخصوصية العائلة</h1>
+    <p>صممنا "حديدة لاند" ليكون الملاذ الأرقى. شاليهات بمسابح خاصة، مدينة سكنية راقية، وحديقة ترفيهية متكاملة تضمن لعائلتك أوقاتاً لا تُنسى.</p>
     <div class="hero-actions">
-      <a href="#book" class="cta-btn">ابدأ رحلتك الآن</a>
-      <a href="#invest" class="btn-ghost">استكشف فرص الأرض</a>
+      <a href="https://wa.me/967780181818" class="cta-btn" target="_blank">تواصل للحجز الفوري</a>
+      <a href="#hodeida-house" class="btn-ghost">اكتشف حديدة هاوس</a>
     </div>
   </div>
 
@@ -1126,248 +307,275 @@
   </div>
 
   <div class="hero-wave">
-    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
       <path d="M0,64 C240,110 420,10 720,40 C1020,70 1200,20 1440,64 L1440,120 L0,120 Z" fill="#F7F3EC"/>
     </svg>
   </div>
 </section>
 
-<!-- ===================== الإقامة والوحدات ===================== -->
+<!-- ===================== الإقامة الفاخرة ===================== -->
 <section class="stay-section" id="stay">
   <div class="stay-heading">
-    <div class="eyebrow-line"><span class="rule"></span> الإقامة</div>
-    <h2>وحدات صُممت لتلائم كل تجربة</h2>
-    <p>من الجناح الفاخر المطل على الأرض المفتوحة، إلى الشاليه العائلي الدافئ، اختر المساحة التي تناسب رحلتك.</p>
+    <div class="eyebrow-line"><span class="rule"></span> الإقامة الفندقية</div>
+    <h2>وحدات صُممت لخصوصيتك المطلقة</h2>
+    <p>نلتزم بتقديم أعلى معايير الضيافة بأسعار موحدة وشفافة. اختر المساحة التي تناسب رحلتك بكل ثقة.</p>
   </div>
 
   <div class="stay-grid">
-
-    <!-- بطاقة 1: الجناح الفاخر (مميزة وأكبر) -->
+    <!-- شاليه VIP -->
     <article class="unit-card featured">
       <div class="unit-media">
         <span class="unit-tag">الأكثر طلباً</span>
-        <div class="unit-photo-placeholder"></div>
-        <!-- استبدل خلفية .unit-photo-placeholder هنا بصورة داخلية للجناح الفاخر (غرفة النوم أو الصالة)
-             مأخوذة من إنستغرام h_d_land — يفضّل صورة أفقية عريضة بإضاءة دافئة عند المساء -->
+        <div class="unit-photo-placeholder" style="background: url('vip.jpg') center/cover;"></div>
         <div class="unit-details-overlay">
           <div class="unit-name-row">
-            <h3>الجناح الفاخر</h3>
-            <span class="price">ابتداءً من 65,000 ر.ي / الليلة</span>
+            <h3>شاليه VIP الفاخر</h3>
+            <span class="price">40,000 ريال / الليلة</span>
           </div>
           <ul class="unit-features">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20v-6a2 2 0 012-2h12a2 2 0 012 2v6M4 12V8a2 2 0 012-2h4M4 20h16"/></svg> يتسع لـ 4 أفراد</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> خدمة على مدار الساعة</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg> إطلالة مفتوحة على الأرض</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20v-6a2 2 0 012-2h12a2 2 0 012 2v6M4 12V8a2 2 0 012-2h4M4 20h16"/></svg> مسبح خاص ومغلق</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> باقة إنترنت ترحيبية</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg> خصوصية 100%</li>
           </ul>
-          <a href="#book" class="unit-cta">اكتشف الجناح</a>
+          <a href="https://wa.me/967780181818" class="unit-cta" target="_blank">احجز الشاليه عبر واتساب</a>
         </div>
       </div>
       <div class="unit-static-label">
-        <h3>الجناح الفاخر</h3>
-        <span>تصميم راقٍ لمن يبحث عن الخصوصية والفخامة</span>
+        <h3>شاليه VIP الفاخر</h3>
+        <span>غرفة عائلية ومجلس فاخر مع مسبح خاص ومغلق تماماً لتستمتع عائلتك بحريتها.</span>
       </div>
     </article>
 
-    <!-- بطاقة 2: الشاليه العائلي -->
+    <!-- الجناح الكبير -->
     <article class="unit-card side-a">
       <div class="unit-media">
-        <div class="unit-photo-placeholder"></div>
-        <!-- استبدل خلفية .unit-photo-placeholder هنا بصورة خارجية أو داخلية للشاليه العائلي من إنستغرام h_d_land -->
+        <!-- غلاف لوني فخم لعدم توفر الصورة -->
+        <div class="unit-photo-placeholder" style="background: linear-gradient(135deg, var(--navy-deep), var(--turquoise)); display: flex; align-items: center; justify-content: center; color: var(--sand); font-size: 26px; font-weight: 900; font-family:'Tajawal', sans-serif;">حديدة لاند</div>
         <div class="unit-details-overlay">
           <div class="unit-name-row">
-            <h3>الشاليه العائلي</h3>
-            <span class="price">ابتداءً من 42,000 ر.ي</span>
+            <h3>الجناح الكبير</h3>
+            <span class="price">25,000 ريال</span>
           </div>
           <ul class="unit-features">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20v-6a2 2 0 012-2h12a2 2 0 012 2v6M4 12V8a2 2 0 012-2h4M4 20h16"/></svg> يتسع لـ 6 أفراد</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21c-4-4-7-7.5-7-11a7 7 0 0114 0c0 3.5-3 7-7 11z"/></svg> مناسب للعائلات</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20v-6a2 2 0 012-2h12a2 2 0 012 2v6M4 12V8a2 2 0 012-2h4M4 20h16"/></svg> مجلس + غرفتين</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21c-4-4-7-7.5-7-11a7 7 0 0114 0c0 3.5-3 7-7 11z"/></svg> مسبح عام مجاني</li>
           </ul>
-          <a href="#book" class="unit-cta">اكتشف الشاليه</a>
+          <a href="https://wa.me/967780181818" class="unit-cta" target="_blank">احجز الجناح</a>
         </div>
       </div>
       <div class="unit-static-label">
-        <h3>الشاليه العائلي</h3>
-        <span>مساحة واسعة ومرافق مشتركة للعائلة</span>
+        <h3>الجناح الكبير</h3>
+        <span>مساحة رحبة تناسب العائلة الكبيرة بكل أريحية.</span>
       </div>
     </article>
 
-    <!-- بطاقة 3: الوحدة القياسية -->
+    <!-- الجناح الصغير -->
     <article class="unit-card side-b">
       <div class="unit-media">
-        <div class="unit-photo-placeholder"></div>
-        <!-- استبدل خلفية .unit-photo-placeholder هنا بصورة للوحدة القياسية من إنستغرام h_d_land -->
+        <div class="unit-photo-placeholder" style="background: url('suite-small.jpg') center/cover;"></div>
         <div class="unit-details-overlay">
           <div class="unit-name-row">
-            <h3>الوحدة القياسية</h3>
-            <span class="price">ابتداءً من 24,000 ر.ي</span>
+            <h3>الجناح الصغير</h3>
+            <span class="price">20,000 ريال</span>
           </div>
           <ul class="unit-features">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20v-6a2 2 0 012-2h12a2 2 0 012 2v6M4 12V8a2 2 0 012-2h4M4 20h16"/></svg> يتسع لـ 2 أفراد</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg> خيار اقتصادي أنيق</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20v-6a2 2 0 012-2h12a2 2 0 012 2v6M4 12V8a2 2 0 012-2h4M4 20h16"/></svg> غرفة عائلية ومجلس</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg> هدوء وأناقة</li>
           </ul>
-          <a href="#book" class="unit-cta">اكتشف الوحدة</a>
+          <a href="https://wa.me/967780181818" class="unit-cta" target="_blank">احجز الجناح</a>
         </div>
       </div>
       <div class="unit-static-label">
-        <h3>الوحدة القياسية</h3>
-        <span>راحة بسيطة بأسعار مناسبة</span>
+        <h3>الجناح الصغير</h3>
+        <span>خيار مثالي ومريح يجمع بين الأناقة والسعر المناسب.</span>
       </div>
     </article>
 
   </div>
 </section>
 
-<!-- ===================== استثمر في الأرض ===================== -->
-<section class="invest-section" id="invest">
+<!-- ===================== حديدة هاوس (المدينة السكنية) ===================== -->
+<section class="invest-section" id="hodeida-house">
   <div class="invest-heading">
-    <div class="eyebrow-line"><span class="rule"></span> استثمر في الأرض</div>
-    <h2>مخطط أراضٍ حقيقي، وفرصة لا تتكرر</h2>
-    <p>كل قطعة على هذا المخطط جزء من مستقبل الحديدة السياحي. مرّر مؤشرك — أو المس الشاشة — فوق القطع المتاحة لاستكشافها.</p>
+    <div class="eyebrow-line"><span class="rule"></span> المدينة السكنية</div>
+    <h2>حديدة هاوس.. اشتري فلتك في أرقى مكان بالحديدة</h2>
+    <p>لم نكتفِ ببناء منتجع، بل أسسنا مجتمعاً سكنياً متكاملاً. اختر قطعة أرضك لبناء فلتك الخاصة ضمن بيئة آمنة، خضراء، ومكتملة الخدمات. مرّر مؤشرك لاكتشاف القطع المتاحة.</p>
   </div>
 
   <div class="invest-layout">
-
     <!-- المخطط التفاعلي -->
     <div class="masterplan" id="masterplan">
+      <!-- يفضل وضع صورة المخطط كخلفية هنا -->
       <div class="masterplan-photo-placeholder"></div>
 
       <div class="plot-grid" id="plotGrid">
-        <div class="plot" data-status="available"><span class="plot-tooltip">قطعة A1 — 450 م² متاحة</span></div>
-        <div class="plot" data-status="available"><span class="plot-tooltip">قطعة A2 — 500 م² متاحة</span></div>
+        <div class="plot" data-status="available"><span class="plot-tooltip">قطعة A1 — مميزة ومتاحة</span></div>
+        <div class="plot" data-status="available"><span class="plot-tooltip">قطعة A2 — إطلالة مفتوحة</span></div>
         <div class="plot" data-status="reserved"></div>
-        <div class="plot" data-status="available"><span class="plot-tooltip">قطعة A4 — 420 م² متاحة</span></div>
+        <div class="plot" data-status="available"><span class="plot-tooltip">قطعة A4 — مساحة عائلية</span></div>
         <div class="plot" data-status="sold"></div>
 
         <div class="plot" data-status="sold"></div>
-        <div class="plot" data-status="available"><span class="plot-tooltip">قطعة B2 — 600 م² متاحة</span></div>
-        <div class="plot" data-status="available"><span class="plot-tooltip">قطعة B3 — 480 م² متاحة</span></div>
+        <div class="plot" data-status="available"><span class="plot-tooltip">قطعة B2 — قريبة للخدمات</span></div>
+        <div class="plot" data-status="available"><span class="plot-tooltip">قطعة B3 — زاوية ممتازة</span></div>
         <div class="plot" data-status="reserved"></div>
-        <div class="plot" data-status="available"><span class="plot-tooltip">قطعة B5 — 510 م² متاحة</span></div>
+        <div class="plot" data-status="available"><span class="plot-tooltip">قطعة B5 — مساحة واسعة</span></div>
 
-        <div class="plot" data-status="available"><span class="plot-tooltip">قطعة C1 — 470 م² متاحة</span></div>
+        <div class="plot" data-status="available"><span class="plot-tooltip">قطعة C1 — ممتازة للفلل</span></div>
         <div class="plot" data-status="sold"></div>
-        <div class="plot" data-status="available"><span class="plot-tooltip">قطعة C3 — 530 م² متاحة</span></div>
-        <div class="plot" data-status="available"><span class="plot-tooltip">قطعة C4 — 455 م² متاحة</span></div>
+        <div class="plot" data-status="available"><span class="plot-tooltip">قطعة C3 — متاحة للبناء</span></div>
+        <div class="plot" data-status="available"><span class="plot-tooltip">قطعة C4 — موقع استراتيجي</span></div>
         <div class="plot" data-status="reserved"></div>
 
-        <div class="plot" data-status="available"><span class="plot-tooltip">قطعة D1 — 495 م² متاحة</span></div>
-        <div class="plot" data-status="available"><span class="plot-tooltip">قطعة D2 — 520 م² متاحة</span></div>
+        <div class="plot" data-status="available"><span class="plot-tooltip">قطعة D1 — إطلالة خضراء</span></div>
+        <div class="plot" data-status="available"><span class="plot-tooltip">قطعة D2 — زاوية استثمارية</span></div>
         <div class="plot" data-status="sold"></div>
-        <div class="plot" data-status="available"><span class="plot-tooltip">قطعة D4 — 440 م² متاحة</span></div>
-        <div class="plot" data-status="available"><span class="plot-tooltip">قطعة D5 — 560 م² متاحة</span></div>
+        <div class="plot" data-status="available"><span class="plot-tooltip">قطعة D4 — متاحة الآن</span></div>
+        <div class="plot" data-status="available"><span class="plot-tooltip">قطعة D5 — مساحة كبرى</span></div>
       </div>
 
       <div class="plan-legend">
-        <span><i class="legend-available"></i> متاحة</span>
+        <span><i class="legend-available"></i> متاحة للبيع</span>
         <span><i class="legend-reserved"></i> محجوزة</span>
         <span><i class="legend-sold"></i> مباعة</span>
       </div>
     </div>
 
-    <!-- عرض القيمة الاستثمارية -->
+    <!-- ميزات المدينة السكنية -->
     <div class="invest-values-wrap">
       <div class="invest-values">
         <div class="value-item">
-          <div class="value-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0112 2a7 7 0 017 7.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
-          </div>
+          <div class="value-icon">🛡️</div>
           <div class="value-text">
-            <h3>موقع استراتيجي</h3>
-            <p>على تقاطع طرق التجارة التاريخية بين إفريقيا وآسيا، وعلى مقربة من ميناء الحديدة الحيوي.</p>
+            <h3>مجتمع آمن ومغلق (Gated Community)</h3>
+            <p>بوابات خاصة، حراسة أمنية على مدار الساعة، وبيئة تضمن لعائلتك أقصى درجات الأمان والخصوصية.</p>
           </div>
         </div>
         <div class="value-item">
-          <div class="value-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>
-          </div>
+          <div class="value-icon">🌿</div>
           <div class="value-text">
-            <h3>عائد استثماري مرتفع</h3>
-            <p>أسعار دخول تنافسية اليوم، مع مسار نمو متوقع مدفوع بمحدودية الأراضي المتاحة على الساحل.</p>
+            <h3>بيئة صحية ومساحات خضراء</h3>
+            <p>تخطيط عمراني يراعي المساحات الخضراء والتهوية الطبيعية، لتعيش في واحة بعيدة عن تلوث وضجيج المدينة.</p>
           </div>
         </div>
         <div class="value-item">
-          <div class="value-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-          </div>
+          <div class="value-icon">💎</div>
           <div class="value-text">
-            <h3>نمو سياحي متسارع</h3>
-            <p>إقبال متزايد على وجهات الساحل الغربي اليمني، يضع الحديدة على خريطة السياحة الإقليمية القادمة.</p>
+            <h3>جيرة راقية ومستقبل واعد</h3>
+            <p>استثمارك في حديدة هاوس يعني انضمامك لنخبة المجتمع في موقع يشهد نمواً مستمراً وقيمة عقارية متصاعدة.</p>
           </div>
         </div>
       </div>
 
       <div class="pulse-cta-wrap">
-        <button class="pulse-cta" id="investCta">
+        <a href="https://wa.me/967780181818?text=أريد%20الاستفسار%20عن%20شراء%20أرض%20في%20حديدة%20هاوس" target="_blank" class="pulse-cta">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-          تحدث مع مستشار الاستثمار
-        </button>
+          تواصل مع إدارة المبيعات
+        </a>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- ===================== التجارب والأنشطة ===================== -->
-<section class="experiences-section" id="experiences">
-  <div class="experiences-heading">
-    <div class="eyebrow-line"><span class="rule"></span> التجارب والأنشطة</div>
-    <h2>لحظات تستحق أن تُروى</h2>
-    <p>من مغامرة على الماء إلى أمسية هادئة مع العائلة، صممنا كل تجربة لتكون جزءاً من حكايتك في الحديدة.</p>
+<!-- ===================== حديقة حديدة لاند الترفيهية (الجديد) ===================== -->
+<section class="bento-section" id="park" style="background: var(--sand); padding-top: 100px;">
+  <div class="experiences-heading" style="max-width: 800px;">
+    <div class="eyebrow-line" style="color:var(--turquoise);"><span class="rule" style="background:var(--turquoise);"></span> متنفس العائلة الأول</div>
+    <h2 style="color: var(--navy);">حديقة حديدة لاند الترفيهية</h2>
+    <p>مساحات خضراء شاسعة وتنسيق طبيعي فريد. صُممت حديقة المنتجع لتكون ملاذاً هادئاً للآباء وبيئة آمنة تمنح أطفالك أوقاتاً مليئة بالضحك والمرح.</p>
   </div>
 
   <div class="bento-grid">
-
-    <!-- بلاطة كبيرة: الرياضات المائية -->
     <article class="bento-tile tile-featured tile-1">
-      <div class="bento-photo-placeholder"></div>
-      <!-- استبدل خلفية .bento-photo-placeholder هنا بصورة/فيديو للرياضات المائية (جيت سكي، تجديف، إلخ)
-           مأخوذة من إنستغرام h_d_land — يفضّل لقطة أفقية حيوية بألوان زاهية -->
+      <div class="bento-photo-placeholder" style="background: url('505989842_9878516608934527_3459644009545625877_n.jpg') center/cover;"></div>
       <div class="bento-scrim"></div>
-      <span class="bento-tag">مغامرة</span>
+      <span class="bento-tag">بوابة الانتعاش</span>
       <div class="bento-info">
-        <h3>الرياضات المائية</h3>
-        <p>جيت سكي، تجديف بالكاياك، ومظلات شراعية بإشراف مدربين معتمدين لكل المستويات.</p>
+        <h3>بيئة طبيعية استثنائية</h3>
+        <p>تصميم هندسي متناغم يعزلك تماماً عن صخب وحرارة المدينة فور دخولك بوابات الحديقة.</p>
       </div>
     </article>
 
-    <!-- بلاطة متوسطة: الجولات البحرية والصيد -->
     <article class="bento-tile tile-2">
-      <div class="bento-photo-placeholder"></div>
-      <!-- استبدل خلفية .bento-photo-placeholder هنا بصورة الجولات البحرية وصيد الأسماك من إنستغرام h_d_land -->
+      <div class="bento-photo-placeholder" style="background: url('505976860_9878516602267861_7663939010048525288_n.jpg') center/cover;"></div>
       <div class="bento-scrim"></div>
       <div class="bento-info">
-        <h3>جولات بحرية وصيد</h3>
-        <p>رحلات صيد تقليدية وجولات بالقارب عند الغروب على البحر الأحمر.</p>
+        <h3>ألعاب وفعاليات مبهجة</h3>
+        <p>مرافق ترفيهية تضمن لأطفالك قضاء أوقات آمنة وممتعة.</p>
       </div>
     </article>
 
-    <!-- بلاطة متوسطة: الفعاليات العائلية -->
     <article class="bento-tile tile-3">
-      <div class="bento-photo-placeholder"></div>
-      <!-- استبدل خلفية .bento-photo-placeholder هنا بصورة فعالية عائلية (ألعاب أطفال، أمسية شواء) من فيسبوك -->
+      <div class="bento-photo-placeholder" style="background: url('505990115_9878516612267860_6013531936416168666_n.jpg') center/cover;"></div>
       <div class="bento-scrim"></div>
       <div class="bento-info">
-        <h3>فعاليات عائلية</h3>
-        <p>أنشطة وألعاب يومية للأطفال، ومساحات آمنة تجمع العائلة بأكملها.</p>
+        <h3>ضيافة وكفتيريا</h3>
+        <p>مشروبات ووجبات خفيفة تكتمل بها جلساتكم العائلية.</p>
       </div>
     </article>
 
-    <!-- بلاطة عريضة: جولات الأرض والطبيعة -->
     <article class="bento-tile tile-4">
-      <div class="bento-photo-placeholder"></div>
-      <!-- استبدل خلفية .bento-photo-placeholder هنا بصورة بانورامية لجولة برية/طبيعية على أرض المنتجع من إنستغرام h_d_land -->
+      <div class="bento-photo-placeholder" style="background: url('505703499_9878516742267847_7300957199732660633_n.jpg') center/cover;"></div>
       <div class="bento-scrim"></div>
-      <span class="bento-tag">الأكثر هدوءاً</span>
+      <span class="bento-tag">للعائلة</span>
       <div class="bento-info">
-        <h3>جولات الأرض والطبيعة</h3>
-        <p>مسارات هادئة سيراً أو بالدراجة عبر أرض المنتجع، مثالية عند غروب الشمس.</p>
+        <h3>مساحات آمنة للأطفال</h3>
+        <p>لحظات عائلية مليئة بالضحك والأمان في مساحات مجهزة خصيصاً لراحتكم.</p>
       </div>
     </article>
-
   </div>
 </section>
 
-<!-- ===================== المعرض السريع ===================== -->
+<!-- ===================== التجارب والخدمات (بعد إزالة الأمور البحرية) ===================== -->
+<section class="experiences-section dark" id="experiences">
+  <div class="experiences-heading">
+    <div class="eyebrow-line"><span class="rule"></span> الخدمات الفندقية</div>
+    <h2>تفاصيل تصنع الفارق.. لراحتك</h2>
+    <p>من أمسية هادئة إلى وجبة لذيذة تصلك لباب الشاليه، صممنا خدمات المنتجع لتلبي كافة تطلعاتك الفندقية.</p>
+  </div>
+
+  <div class="bento-grid">
+    <article class="bento-tile tile-featured tile-1">
+      <div class="bento-photo-placeholder" style="background: linear-gradient(150deg, #12566a 0%, #0B2E45 70%);"></div>
+      <div class="bento-scrim"></div>
+      <span class="bento-tag" style="background: var(--gold); color: var(--navy);">استرخاء</span>
+      <div class="bento-info">
+        <h3>انتعاش المسبح العام</h3>
+        <p>مسبح مجهز بأعلى المعايير، يوفر الانتعاش والحيوية لضيوف الأجنحة في أجواء آمنة ومريحة.</p>
+      </div>
+    </article>
+
+    <article class="bento-tile tile-2">
+      <div class="bento-photo-placeholder" style="background: linear-gradient(150deg, #c98a3a 0%, #8a5c22 75%);"></div>
+      <div class="bento-scrim"></div>
+      <div class="bento-info">
+        <h3>أمسيات الغروب الساحرة</h3>
+        <p>استرخاء تام في الأجواء المفتوحة بعد غروب الشمس والنسيم العليل.</p>
+      </div>
+    </article>
+
+    <article class="bento-tile tile-3">
+      <div class="bento-photo-placeholder" style="background: linear-gradient(150deg, #3a7c79 0%, #1f4e4c 75%);"></div>
+      <div class="bento-scrim"></div>
+      <div class="bento-info">
+        <h3>مصليات منفصلة</h3>
+        <p>مصلى خاص للرجال ومصلى مستقل للنساء لتأدية الفروض بطمأنينة وخصوصية.</p>
+      </div>
+    </article>
+
+    <article class="bento-tile tile-4">
+      <div class="bento-photo-placeholder" style="background: linear-gradient(150deg, #a85440 0%, #6e352a 75%);"></div>
+      <div class="bento-scrim"></div>
+      <span class="bento-tag">ميزة</span>
+      <div class="bento-info">
+        <h3>طعام بلا قيود (توصيل فوري)</h3>
+        <p>موقعنا يتيح لك طلب غدائك أو عشائك من أفخم مطاعم الحديدة ليصلك ساخناً لباب شاليهك مباشرة.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===================== المعرض ===================== -->
 <section class="gallery-section" id="gallery">
   <div class="gallery-heading">
     <div class="eyebrow-line"><span class="rule"></span> المعرض</div>
@@ -1376,34 +584,28 @@
 
   <div class="gallery-grid">
     <div class="gallery-item g1">
-      <div class="gallery-photo-placeholder"></div>
-      <!-- استبدل بصورة المسبح الرئيسي من إنستغرام h_d_land — هذه أكبر بلاطة في الشبكة فاختر صورة أفقية عالية الجودة -->
-      <span class="gallery-caption">المسبح الرئيسي</span>
+      <div class="gallery-photo-placeholder" style="background-image: url('hero.jpg');"></div>
+      <span class="gallery-caption">بوابة المنتجع الفاخرة</span>
     </div>
     <div class="gallery-item g2">
-      <div class="gallery-photo-placeholder"></div>
-      <!-- استبدل بصورة المساحات الخضراء وأرض المنتجع -->
-      <span class="gallery-caption">المساحات الخضراء</span>
+      <div class="gallery-photo-placeholder" style="background-image: url('505989842_9878516608934527_3459644009545625877_n.jpg');"></div>
+      <span class="gallery-caption">المساحات الخضراء والحديقة</span>
     </div>
     <div class="gallery-item g3">
-      <div class="gallery-photo-placeholder"></div>
-      <!-- استبدل بصورة ليلية للمنتجع (إضاءة المساء) من فيسبوك -->
-      <span class="gallery-caption">أجواء المساء</span>
+      <div class="gallery-photo-placeholder" style="background-image: url('vip.jpg');"></div>
+      <span class="gallery-caption">الشاليهات الخاصة</span>
     </div>
     <div class="gallery-item g4">
-      <div class="gallery-photo-placeholder"></div>
-      <!-- استبدل بصورة الاستقبال / اللوبي -->
-      <span class="gallery-caption">الاستقبال</span>
+      <div class="gallery-photo-placeholder" style="background-image: url('suite-small.jpg');"></div>
+      <span class="gallery-caption">فخامة الأجنحة</span>
     </div>
     <div class="gallery-item g5">
-      <div class="gallery-photo-placeholder"></div>
-      <!-- استبدل بصورة غروب الشمس على أرض المنتجع -->
-      <span class="gallery-caption">الغروب</span>
+      <div class="gallery-photo-placeholder" style="background-image: url('505703499_9878516742267847_7300957199732660633_n.jpg');"></div>
+      <span class="gallery-caption">مرافق الأطفال</span>
     </div>
     <div class="gallery-item g6">
-      <div class="gallery-photo-placeholder"></div>
-      <!-- استبدل بصورة تفصيلية معمارية (نوافذ/زخارف تهامية) من إنستغرام h_d_land -->
-      <span class="gallery-caption">تفاصيل معمارية</span>
+      <div class="gallery-photo-placeholder" style="background-image: url('505990115_9878516612267860_6013531936416168666_n.jpg');"></div>
+      <span class="gallery-caption">الكفتيريا والضيافة</span>
     </div>
   </div>
 </section>
@@ -1420,15 +622,7 @@
         </svg>
         <span>حديدة لاند<small>HODEIDA LAND RESORT</small></span>
       </a>
-      <p>حيث تلتقي الأرض بحكاية البحر الأحمر — إقامة، استثمار، وتجارب لا تُنسى في قلب الحديدة.</p>
-      <div class="footer-social">
-        <a href="https://www.facebook.com/hodeida.land.resort/?locale=ar_AR" target="_blank" rel="noopener" aria-label="فيسبوك">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5h2.5l.5-3h-3V8.5c0-.87.24-1.46 1.5-1.46H16.5V4.35A20 20 0 0014.2 4.2c-2.28 0-3.84 1.39-3.84 3.94V10.5H8v3h2.36V21h3.14z"/></svg>
-        </a>
-        <a href="https://www.instagram.com/h_d_land/?hl=ar" target="_blank" rel="noopener" aria-label="إنستغرام">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg>
-        </a>
-      </div>
+      <p>حيث تلتقي فخامة الإقامة بروعة الطبيعة — إقامة فندقية، استثمار عقاري آمن، وتجارب عائلية لا تُنسى في قلب الحديدة.</p>
     </div>
 
     <div class="footer-col">
@@ -1437,21 +631,21 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0112 2a7 7 0 017 7.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
         <span>
           منتجع حديدة لاند السياحي<br>
-          <!-- استبدل href="#" هنا برابط الموقع الحقيقي على خرائط جوجل (الرابط المُرسل سابقاً لم يصل بشكل سليم) -->
-          <a href="#" target="_blank" rel="noopener">عرض الموقع على خرائط جوجل</a>
+          مدينة الحديدة، طريق المطار<br>
+          الجمهورية اليمنية
         </span>
       </div>
 
       <ul class="footer-phones">
         <li>
-          <a href="tel:+967739181818" dir="ltr">
-            739181818
+          <a href="tel:+967780181818">
+            780181818
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.1-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.13.97.36 1.92.7 2.83a2 2 0 01-.45 2.1L8 9.9a16 16 0 006 6l1.27-1.27a2 2 0 012.1-.45c.91.34 1.86.57 2.83.7A2 2 0 0122 16.9z"/></svg>
           </a>
         </li>
         <li>
-          <a href="tel:+967713181818" dir="ltr">
-            713181818
+          <a href="tel:+967739181818">
+            739181818
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.1-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.13.97.36 1.92.7 2.83a2 2 0 01-.45 2.1L8 9.9a16 16 0 006 6l1.27-1.27a2 2 0 012.1-.45c.91.34 1.86.57 2.83.7A2 2 0 0122 16.9z"/></svg>
           </a>
         </li>
@@ -1459,28 +653,34 @@
 
       <a class="whatsapp-btn" href="https://wa.me/967780181818" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5.1-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1112 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-2-1.2-.7-.7-1.2-1.5-1.4-1.7-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.2-.4.1-.2 0-.3 0-.4-.1-.1-.5-1.3-.7-1.8-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 4 3.5.6.2 1 .4 1.3.5.6.2 1.1.2 1.5.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.1-.4-.2z"/></svg>
-          تواصل عبر واتساب — 780181818
+          تواصل عبر واتساب (@Hodeidahland)
       </a>
     </div>
 
     <div class="footer-col">
       <h4>روابط سريعة</h4>
       <ul class="footer-links">
-        <li><a href="#stay">الإقامة</a></li>
-        <li><a href="#invest">استثمر في الأرض</a></li>
-        <li><a href="#experiences">التجارب والأنشطة</a></li>
+        <li><a href="#stay">الإقامة الفاخرة</a></li>
+        <li><a href="#hodeida-house">حديدة هاوس (أراضي وفلل)</a></li>
+        <li><a href="#park">حديقة المنتجع</a></li>
+        <li><a href="#experiences">التجارب والخدمات</a></li>
         <li><a href="#gallery">المعرض</a></li>
-        <li><a href="#book">احجز الآن</a></li>
       </ul>
     </div>
 
   </div>
 
   <div class="footer-bottom">
-    <span>© 2026 حديدة لاند ريزورت. جميع الحقوق محفوظة.</span>
+    <span>© 2026 منتجع حديدة لاند السياحي. جميع الحقوق محفوظة.</span>
     <span>الحديدة، الجمهورية اليمنية</span>
   </div>
 </footer>
+
+<!-- الزر العائم للواتساب -->
+<a href="https://wa.me/967780181818" class="floating-wa" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24"><path d="M12.01 2.01c-5.52 0-10 4.48-10 10 0 1.95.56 3.77 1.51 5.31L2 22l4.83-1.46c1.51.87 3.27 1.39 5.18 1.39 5.52 0 10-4.48 10-10 0-5.52-4.48-10-10-10zm5.66 14.39c-.27.76-1.55 1.47-2.14 1.54-.53.06-1.19.16-3.41-.76-2.67-1.11-4.38-3.83-4.51-4.01-.14-.18-1.07-1.43-1.07-2.73s.68-1.94.92-2.21c.24-.27.53-.34.71-.34.18 0 .36 0 .52.01.17.01.4-.07.63.48.24.57.81 1.98.88 2.12.07.14.12.31.02.48-.1.18-.15.28-.3.45-.15.17-.32.37-.45.5-.15.15-.31.32-.13.63.18.31.81 1.34 1.73 2.16 1.18 1.05 2.19 1.38 2.5 1.53.31.15.49.12.67-.08.18-.21.78-.91.99-1.22.21-.31.42-.26.71-.15.29.11 1.83.86 2.15 1.02.31.16.52.24.6.38.08.14.08.82-.19 1.58z"/></svg>
+  احجز عبر واتساب (@Hodeidahland)
+</a>
 
 <script>
 (function(){
@@ -1521,7 +721,7 @@
     link.addEventListener('click', function(){ toggleMenu(false); });
   });
 
-  // المخطط التفاعلي: على الأجهزة اللمسية، النقر على قطعة متاحة يبرزها ويظهر التلميح
+  // المخطط التفاعلي
   var plotGrid = document.getElementById('plotGrid');
   if(plotGrid){
     plotGrid.querySelectorAll('.plot[data-status="available"]').forEach(function(plot){
