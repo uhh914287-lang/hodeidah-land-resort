@@ -81,10 +81,11 @@
   .bento-info h3 { font-size: 22px; font-weight: 900; margin: 0 0 10px 0; color: var(--gold);}
   .bento-info p { font-size: 15px; line-height: 1.7; color: rgba(255,255,255,0.85); margin: 0; }
 
-  /* Details that matter */
+  /* Details that matter (4 boxes now) */
   .details-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; margin-top: 40px;}
-  .detail-box { background: white; padding: 30px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.05); text-align: right;}
-  .detail-box h4 { color: var(--navy); font-size: 20px; margin: 0 0 10px; font-weight: 900;}
+  .detail-box { background: white; padding: 35px 25px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.05); text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.02); transition: 0.3s;}
+  .detail-box:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.06); transform: translateY(-5px);}
+  .detail-box h4 { color: var(--navy); font-size: 20px; margin: 0 0 15px; font-weight: 900;}
   .detail-box p { color: #666; line-height: 1.7; margin: 0; font-size: 15px;}
 
   /* Floating WA */
@@ -184,13 +185,17 @@
   </div>
 </section>
 
-<!-- تفاصيل المنتجع (تكملة لنسبة الـ 80%) -->
+<!-- تفاصيل المنتجع (تكملة لنسبة الـ 80% - تم إضافة المصلى هنا) -->
 <section class="section" style="background: #FAFAFA; padding-top: 40px;">
   <h2 class="section-title" style="text-align: center;">معاييرنا الفندقية لراحتك</h2>
   <div class="details-grid">
     <div class="detail-box">
       <h4>🛡️ أمان وخصوصية</h4>
-      <p>طاقم حراسة محترف على مدار الساعة، وتصميم معماري يضمن عدم كشف الشاليهات على بعضها لضمان راحتكم.</p>
+      <p>طاقم حراسة محترف على مدار الساعة، وتصميم معماري يضمن عدم كشف الشاليهات على بعضها لضمان راحتكم التامة.</p>
+    </div>
+    <div class="detail-box">
+      <h4>🕌 مصليات منفصلة</h4>
+      <p>لأن راحتكم الروحية تهمنا، وفرنا مصلى خاصاً للرجال ومصلى مستقلاً للنساء، لتأدية الفروض بكل طمأنينة وخصوصية.</p>
     </div>
     <div class="detail-box">
       <h4>🍽️ طعام بلا قيود</h4>
@@ -198,7 +203,7 @@
     </div>
     <div class="detail-box">
       <h4>🛒 مرافق خدمية</h4>
-      <p>لتلبية احتياجاتكم، وفرنا بقالة، كفتيريا للقهوة، ومغسلة فندقية (Laundry) داخل أسوار المنتجع.</p>
+      <p>لتلبية احتياجاتكم، وفرنا بقالة، كفتيريا للقهوة، ومغسلة فندقية (Laundry) لخدمتكم داخل أسوار المنتجع.</p>
     </div>
   </div>
 </section>
