@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="منتجع حديدة لاند - واحتك الخضراء الفاخرة في الحديدة. شاليهات VIP بمسابح خاصة، أجنحة عائلية، وخصوصية تامة.">
-<title>حديدة لاند ريزورت | إقامة فندقية فاخرة</title>
+<title>حديدة لاند ريزورت | إقامة فندقية فاخرة في الحديدة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&family=Almarai:wght@300;400;700&display=swap" rel="stylesheet">
 
 <style>
@@ -14,68 +16,117 @@
   h1, h2, h3{ font-family: 'Tajawal', sans-serif; }
   a{ text-decoration:none; color:inherit; }
   
-  .site-header{ position: fixed; top: 0; right:0; left:0; z-index: 100; height: var(--header-h); display:flex; align-items:center; padding: 0 5%; background: rgba(8, 31, 48, 0.95); backdrop-filter: blur(10px); }
+  /* Header & Navigation */
+  .site-header{ position: fixed; top: 0; right:0; left:0; z-index: 100; height: var(--header-h); display:flex; align-items:center; padding: 0 clamp(20px, 5vw, 64px); background: rgba(8, 31, 48, 0.98); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
   .brand{ display:flex; align-items:center; gap:12px; font-weight:900; font-size: 20px; color: var(--sand); }
   .brand-mark{ width:45px; height:45px; background: white; border-radius: 6px; padding: 2px; }
   .nav-links{ margin-inline-start:auto; display:flex; gap: 30px; align-items:center;}
-  .nav-links a{ color: var(--sand); font-weight:700; font-size: 15px;}
-  .cta-btn{ background: var(--coral); color: var(--sand); padding: 10px 24px; border-radius: 999px; font-weight:700; transition: 0.3s;}
-  
-  .hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 0 5%; background: linear-gradient(180deg, rgba(8, 31, 48, 0.6), rgba(8, 31, 48, 0.95)), url('hero.jpg') center/cover no-repeat; background-color: var(--navy-deep); text-align: center; }
+  .nav-links a{ color: var(--sand); font-weight:700; font-size: 15px; position: relative;}
+  .nav-links a::after{ content:''; position:absolute; right:0; bottom:-5px; width:0%; height:2px; background: var(--coral); transition: 0.3s;}
+  .nav-links a:hover::after{ width: 100%;}
+  .cta-btn{ background: var(--coral); color: var(--sand) !important; padding: 10px 24px; border-radius: 999px; font-weight:700; transition: 0.3s; display: inline-block; text-align: center;}
+  .cta-btn:hover{ background: #d95f3e; transform: translateY(-2px);}
+
+  /* Mobile Menu */
+  .hamburger{ display:none; width:40px; height:40px; background:transparent; border:none; cursor:pointer; margin-inline-start:auto; position: relative; z-index: 110;}
+  .hamburger span{ position:absolute; right:5px; width:30px; height:2px; background: var(--sand); transition: 0.3s;}
+  .hamburger span:nth-child(1){ top: 12px;} .hamburger span:nth-child(2){ top: 19px;} .hamburger span:nth-child(3){ top: 26px;}
+  .mobile-menu{ position: fixed; inset: 0; background: var(--navy-deep); z-index: 105; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px; clip-path: circle(0px at top right); transition: 0.5s; }
+  .mobile-menu.open{ clip-path: circle(150% at top right); }
+  .mobile-menu a{ color: var(--sand); font-size: 24px; font-family: 'Tajawal', sans-serif; font-weight: bold;}
+
+  /* Hero Section (Safe & Centered) */
+  .hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 0 5%; background: linear-gradient(180deg, rgba(8, 31, 48, 0.5), rgba(8, 31, 48, 0.95)), url('hero.jpg') center/cover no-repeat; background-color: var(--navy-deep); overflow: hidden; text-align: center; }
   .hero-content { position: relative; z-index: 5; width: 100%; max-width: 800px; color: var(--sand); padding-top: 60px; }
   .eyebrow-line { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 22px; color: var(--gold); font-weight: 700; font-size: 15px; }
   .eyebrow-line .rule { width: 40px; height: 2px; background: var(--gold); }
   .hero-content h1 { font-size: clamp(38px, 6vw, 72px); line-height: 1.15; font-weight: 900; margin: 0 0 22px; }
   .hero-content h1 em { font-style: normal; color: var(--turquoise); }
-  .hero-content p { font-size: 18px; line-height: 1.8; color: rgba(247,243,236,.86); margin: 0 auto 36px; max-width:600px;}
+  .hero-content p { font-size: clamp(16px, 1.8vw, 19px); line-height: 1.8; color: rgba(247,243,236,.9); margin: 0 auto 36px; font-weight: 300; }
   
+  .hero-wave { position: absolute; bottom: -1px; left: 0; right: 0; line-height: 0; z-index: 4; }
+  .hero-wave svg { width: 100%; height: clamp(50px, 8vw, 120px); display: block; }
+
+  /* Sections */
   .section { padding: 80px 5%; }
   .section-title { color: var(--navy); font-size: 36px; font-weight: 900; margin-bottom: 15px;}
-  
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-  .card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 3px solid var(--gold);}
-  .card.featured { border-top-color: var(--coral); grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr;}
-  .card-img { height: 250px; background: #ddd; position: relative;}
-  .card.featured .card-img { height: 100%; }
-  .card-content { padding: 25px; }
-  .feature-list { list-style: none; padding: 0; margin-bottom: 20px;}
-  .feature-list li { margin-bottom: 10px; font-size: 15px; line-height: 1.6; display: flex; gap: 8px;}
+  .section-subtitle { font-size: 16px; line-height: 1.8; color: #555; max-width: 600px; margin-bottom: 40px;}
 
+  /* Grid & Cards */
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+  .card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 3px solid var(--gold); display: flex; flex-direction: column;}
+  .card.featured { border-top-color: var(--coral); grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr;}
+  .card-img { height: 250px; position: relative;}
+  .card.featured .card-img { height: 100%; }
+  .card-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column;}
+  .feature-list { list-style: none; padding: 0; margin-bottom: 20px; flex-grow: 1;}
+  .feature-list li { margin-bottom: 10px; font-size: 15px; line-height: 1.6; display: flex; gap: 8px; color: #444;}
+
+  /* Bento Grid (Park & Experiences) */
   .bento-section { background: var(--navy-deep); color: var(--sand); padding: 80px 5%; }
-  .bento-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 40px;}
-  .bento-tile { position: relative; overflow: hidden; border-radius: 8px; min-height: 250px; }
+  .bento-section.light { background: var(--sand); color: var(--ink); }
+  .bento-section.light .section-title { color: var(--navy); }
+  .bento-section.light p { color: #555; }
+
+  .bento-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px; margin-top: 40px;}
+  .bento-tile { position: relative; overflow: hidden; border-radius: 8px; min-height: 280px; }
   .bento-photo-placeholder { position: absolute; inset: 0; transition: transform 1s; z-index: 1; }
   .bento-tile:hover .bento-photo-placeholder { transform: scale(1.1); }
-  .bento-scrim { position: absolute; inset: 0; z-index: 2; background: linear-gradient(0deg, rgba(8,31,48,.92) 0%, rgba(8,31,48,.1) 60%); }
-  .bento-info { position: absolute; right: 0; left: 0; bottom: 0; z-index: 3; padding: 22px; color: var(--sand); }
-  .bento-info h3 { font-size: 20px; font-weight: 700; margin: 0; }
+  .bento-scrim { position: absolute; inset: 0; z-index: 2; background: linear-gradient(0deg, rgba(8,31,48,.92) 0%, rgba(8,31,48,.1) 65%); }
+  .bento-info { position: absolute; right: 0; left: 0; bottom: 0; z-index: 3; padding: 25px; color: var(--sand); }
+  .bento-info h3 { font-size: 22px; font-weight: 700; margin: 0 0 10px 0; }
+  .bento-info p { font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.8); margin: 0; }
 
-  .floating-wa { position: fixed; bottom: 25px; right: 25px; background: #25D366; color: white !important; border-radius: 50px; padding: 12px 24px; z-index: 999; display: flex; align-items: center; gap: 10px; font-weight: bold; font-size: 15px; box-shadow: 0 4px 15px rgba(37,211,102,0.4); }
-  @media(max-width: 768px){ .card.featured{ grid-template-columns: 1fr; } .nav-links{ display:none; } }
+  /* Floating WA */
+  .floating-wa { position: fixed; bottom: 25px; right: 25px; background: #25D366; color: white !important; border-radius: 50px; padding: 12px 24px; z-index: 999; display: flex; align-items: center; gap: 10px; font-weight: bold; font-size: 15px; box-shadow: 0 4px 15px rgba(37,211,102,0.4); transition: 0.3s; }
+  .floating-wa:hover { transform: translateY(-3px) scale(1.05); }
+
+  @media(max-width: 850px){ 
+    .nav-links{ display:none; } 
+    .hamburger{ display:block; }
+    .card.featured{ grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
 
 <header class="site-header">
-  <a href="#" class="brand"><div class="brand-mark"></div>حديدة لاند</a>
+  <a href="#home" class="brand"><div class="brand-mark"></div>حديدة لاند</a>
   <nav class="nav-links">
     <a href="#stay">الإقامة</a>
     <a href="#park">حديقة المنتجع</a>
-    <a href="https://wa.me/967780181818" class="cta-btn">تواصل واتساب (@Hodeidahland)</a>
+    <a href="#experiences">التجارب والأنشطة</a>
+    <a href="https://wa.me/967780181818" class="cta-btn" target="_blank">تواصل واتساب (@Hodeidahland)</a>
   </nav>
+  <button class="hamburger" id="hamburgerBtn">
+    <span></span><span></span><span></span>
+  </button>
 </header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#stay">الإقامة</a>
+  <a href="#park">حديقة المنتجع</a>
+  <a href="#experiences">التجارب والأنشطة</a>
+  <a href="https://wa.me/967780181818" class="cta-btn" target="_blank">واتساب @Hodeidahland</a>
+</div>
 
 <section class="hero" id="home">
   <div class="hero-content">
     <div class="eyebrow-line"><span class="rule"></span> الخيار الأول للعوائل — الحديدة</div>
     <h1>إجازتك في <em>الحديدة</em><br>بمعايير فندقية راقية</h1>
     <p>مساحات خضراء، شاليهات بمسابح خاصة، وخصوصية تامة تضمن لعائلتك أوقاتاً لا تُنسى في عروس البحر الأحمر.</p>
-    <a href="https://wa.me/967780181818" class="cta-btn">تواصل معنا للحجز (@Hodeidahland)</a>
+    <a href="https://wa.me/967780181818" class="cta-btn" target="_blank">تواصل معنا للحجز (@Hodeidahland)</a>
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,64 C240,110 420,10 720,40 C1020,70 1200,20 1440,64 L1440,120 L0,120 Z" fill="#F7F3EC"/></svg>
   </div>
 </section>
 
+<!-- قسم الإقامة الشامل -->
 <section id="stay" class="section">
   <h2 class="section-title">فخامة تستحقها.. بشفافية تامة</h2>
+  <p class="section-subtitle">نلتزم بتقديم أعلى معايير الضيافة بأسعار موحدة وشفافة، لضمان تجربة راقية لا تقبل المساومة.</p>
+  
   <div class="grid">
     <div class="card featured">
       <div class="card-img" style="background: url('vip.jpg') center/cover;"></div>
@@ -83,19 +134,24 @@
         <h3 style="color: var(--navy);">شاليه VIP (الأكثر طلباً)</h3>
         <div style="color: var(--gold); font-size: 20px; font-weight: bold; margin-bottom: 15px;">40,000 ريال / ليلة</div>
         <ul class="feature-list">
-          <li>✨ <strong>خصوصية مطلقة:</strong> مسبح خاص ومغلق تماماً.</li>
+          <li>✨ <strong>خصوصية مطلقة:</strong> غرفة عائلية ومجلس فاخر مع مسبح خاص ومغلق تماماً.</li>
+          <li>🌳 <strong>البيئة الاستثنائية:</strong> دخول مباشر للحدائق المنسقة والمساحات العائلية الآمنة.</li>
           <li>🌐 <strong>باقة ترحيبية:</strong> اتصال إنترنت (فايبر) كباقة ترحيبية مخصصة للشاليه.</li>
         </ul>
-        <a href="https://wa.me/967780181818" class="cta-btn">احجز عبر واتساب</a>
+        <a href="https://wa.me/967780181818" class="cta-btn" target="_blank">احجز الشاليه عبر واتساب</a>
       </div>
     </div>
 
     <div class="card">
-      <div class="card-img" style="background: linear-gradient(135deg, var(--navy-deep), var(--turquoise)); display: flex; align-items: center; justify-content: center; color: var(--sand); font-size: 24px; font-weight: bold;">حديدة لاند</div>
+      <div class="card-img" style="background: linear-gradient(135deg, var(--navy-deep), var(--turquoise)); display: flex; align-items: center; justify-content: center; color: var(--sand); font-size: 26px; font-weight: bold; font-family:'Tajawal', sans-serif;">حديدة لاند</div>
       <div class="card-content">
         <h3 style="color: var(--navy);">الجناح الكبير</h3>
         <div style="color: var(--gold); font-size: 20px; font-weight: bold; margin-bottom: 15px;">25,000 ريال / ليلة</div>
-        <a href="https://wa.me/967780181818" class="cta-btn" style="display:block; text-align:center;">احجز الجناح</a>
+        <ul class="feature-list">
+          <li>✨ مجلس واسع + غرفة عائلية + غرفة إضافية بسريرين.</li>
+          <li>🏊‍♂️ دخول مجاني للمسبح العام المنعش.</li>
+        </ul>
+        <a href="https://wa.me/967780181818" class="cta-btn" target="_blank">احجز الجناح الكبير</a>
       </div>
     </div>
 
@@ -104,42 +160,141 @@
       <div class="card-content">
         <h3 style="color: var(--navy);">الجناح الصغير</h3>
         <div style="color: var(--gold); font-size: 20px; font-weight: bold; margin-bottom: 15px;">20,000 ريال / ليلة</div>
-        <a href="https://wa.me/967780181818" class="cta-btn" style="display:block; text-align:center;">احجز الجناح</a>
+        <ul class="feature-list">
+          <li>✨ خيار مثالي ومريح: غرفة بسرير عائلي ومجلس أنيق.</li>
+          <li>🏊‍♂️ دخول مجاني للمسبح العام المنعش.</li>
+        </ul>
+        <a href="https://wa.me/967780181818" class="cta-btn" target="_blank">احجز الجناح الصغير</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- قسم حديقة المنتجع (بصور الحديقة الحقيقية) -->
 <section id="park" class="bento-section">
-  <h2 style="font-size: 36px;">حديقة حديدة لاند.. واحتك الخضراء</h2>
+  <div class="eyebrow-line" style="color:var(--turquoise); justify-content:flex-start; margin-bottom: 10px;"><span class="rule" style="background:var(--turquoise);"></span> متنفس العائلة الأول</div>
+  <h2 style="font-size: 36px; margin: 0 0 10px 0;">حديقة حديدة لاند.. واحتك الخضراء</h2>
+  <p style="color: rgba(255,255,255,0.8); line-height: 1.8; max-width: 600px; margin-bottom: 40px;">مساحات خضراء وتنسيق طبيعي فريد يحيط بالشاليهات، صُممت لتكون ملاذاً هادئاً للآباء وبيئة آمنة للمرح.</p>
+  
   <div class="bento-grid">
     <article class="bento-tile">
       <div class="bento-photo-placeholder" style="background: url('505989842_9878516608934527_3459644009545625877_n.jpg') center/cover;"></div>
       <div class="bento-scrim"></div>
-      <div class="bento-info"><h3>بوابة الانتعاش والهدوء</h3></div>
+      <div class="bento-info">
+        <h3>بوابة الانتعاش والهدوء</h3>
+        <p>تصميم متناغم يعزلك عن صخب المدينة.</p>
+      </div>
     </article>
+
     <article class="bento-tile">
       <div class="bento-photo-placeholder" style="background: url('505976860_9878516602267861_7663939010048525288_n.jpg') center/cover;"></div>
       <div class="bento-scrim"></div>
-      <div class="bento-info"><h3>فعاليات عائلية مبهجة</h3></div>
+      <div class="bento-info">
+        <h3>فعاليات مبهجة</h3>
+        <p>بيئة مثالية لاستمتاع الأطفال بمرح لا ينتهي.</p>
+      </div>
     </article>
+
     <article class="bento-tile">
       <div class="bento-photo-placeholder" style="background: url('505990115_9878516612267860_6013531936416168666_n.jpg') center/cover;"></div>
       <div class="bento-scrim"></div>
-      <div class="bento-info"><h3>ضيافة وكفتيريا متكاملة</h3></div>
+      <div class="bento-info">
+        <h3>ضيافة متكاملة</h3>
+        <p>كفتيريا المنتجع بخدمتكم في الاستراحات الخضراء.</p>
+      </div>
     </article>
+    
     <article class="bento-tile">
       <div class="bento-photo-placeholder" style="background: url('505703499_9878516742267847_7300957199732660633_n.jpg') center/cover;"></div>
       <div class="bento-scrim"></div>
-      <div class="bento-info"><h3>مساحات آمنة للأطفال</h3></div>
+      <div class="bento-info">
+        <h3>مساحات آمنة</h3>
+        <p>لحظات عائلية مليئة بالضحك والأمان.</p>
+      </div>
     </article>
   </div>
 </section>
 
-<footer style="background: #05131f; color: #888; text-align: center; padding: 40px 5%;">
-  <h3 style="color: white;">منتجع حديدة لاند السياحي</h3>
-  <p>واتساب: @Hodeidahland | +967 780 181818</p>
+<!-- قسم التجارب والأنشطة (المكتمل بالأغلفة الفخمة لضمان الشكل) -->
+<section id="experiences" class="bento-section light">
+  <div class="eyebrow-line" style="color:var(--coral); justify-content:flex-start; margin-bottom: 10px;"><span class="rule" style="background:var(--coral);"></span> التجارب والأنشطة</div>
+  <h2 class="section-title" style="margin: 0 0 10px 0;">لحظات تستحق أن تُروى</h2>
+  <p style="max-width: 600px; line-height: 1.8; margin-bottom: 40px;">من مغامرة مسلية إلى أمسية هادئة مع العائلة، صممنا كل تجربة لتكون جزءاً من حكايتك في الحديدة.</p>
+  
+  <div class="bento-grid">
+    <article class="bento-tile">
+      <div class="bento-photo-placeholder" style="background: linear-gradient(135deg, var(--turquoise), var(--navy));"></div>
+      <div class="bento-scrim" style="background: linear-gradient(0deg, rgba(8,31,48,0.7) 0%, transparent 100%);"></div>
+      <div class="bento-info">
+        <h3>المسبح العام</h3>
+        <p>انتعاش وحيوية في مسبح المنتجع المجهز بأعلى المعايير.</p>
+      </div>
+    </article>
+    
+    <article class="bento-tile">
+      <div class="bento-photo-placeholder" style="background: linear-gradient(135deg, var(--gold), var(--coral));"></div>
+      <div class="bento-scrim" style="background: linear-gradient(0deg, rgba(8,31,48,0.7) 0%, transparent 100%);"></div>
+      <div class="bento-info">
+        <h3>أجواء المساء الساحرة</h3>
+        <p>استرخاء تام في الأجواء المفتوحة بعد غروب الشمس.</p>
+      </div>
+    </article>
+
+    <article class="bento-tile">
+      <div class="bento-photo-placeholder" style="background: linear-gradient(135deg, var(--navy-deep), var(--turquoise));"></div>
+      <div class="bento-scrim" style="background: linear-gradient(0deg, rgba(8,31,48,0.7) 0%, transparent 100%);"></div>
+      <div class="bento-info">
+        <h3>جلسات خاصة</h3>
+        <p>استراحات مميزة صُممت لتصفية الذهن برفقة من تحب.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- قسم الخدمات -->
+<section class="section" style="padding-top: 20px;">
+  <h2 class="section-title" style="text-align: center; margin-bottom: 40px;">خيارات مفتوحة.. وخدمات متكاملة</h2>
+  <div class="grid">
+    <div style="background: white; padding: 30px; border-radius: 8px; border: 1px solid #eee; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
+      <h3 style="color: var(--turquoise); font-size: 22px; margin-bottom: 15px;">🍽️ طعام بلا قيود</h3>
+      <p style="color: #555; line-height: 1.8;">استمتع بطلب غدائك من أرقى مطاعم الحديدة ليصلك حاراً وسريعاً إلى باب شاليهك. خيارات لا حصر لها تلبي ذوق عائلتك.</p>
+    </div>
+    <div style="background: white; padding: 30px; border-radius: 8px; border: 1px solid #eee; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
+      <h3 style="color: var(--turquoise); font-size: 22px; margin-bottom: 15px;">🛒 خدمات لراحتكم</h3>
+      <p style="color: #555; line-height: 1.8;">يوفر المنتجع (بقالة، وكفتيريا، ومغسلة فندقية) تعمل كخدمات إضافية لتلبية كافة احتياجاتكم اليومية دون الحاجة لمغادرة المنتجع.</p>
+    </div>
+  </div>
+</section>
+
+<!-- الفوتر والزر العائم -->
+<footer style="background: #05131f; color: #888; text-align: center; padding: 60px 5% 40px;">
+  <h3 style="color: white; font-size: 24px; margin-bottom: 15px;">حديدة لاند</h3>
+  <p style="max-width: 400px; margin: 0 auto 20px; line-height: 1.8;">حيث تلتقي الأرض بحكاية البحر الأحمر — إقامة، وتجارب لا تُنسى في قلب الحديدة.</p>
+  <div style="border-top: 1px solid rgba(255,255,255,0.1); margin: 30px auto; max-width: 300px;"></div>
+  <p>للحجز والاستفسار عبر واتساب: <br>
+    <a href="https://wa.me/967780181818" style="color: var(--gold); direction: ltr; display: inline-block; margin-top: 15px; font-size: 18px; font-weight: bold;">@Hodeidahland | +967 780 181818</a>
+  </p>
 </footer>
-<a href="https://wa.me/967780181818" class="floating-wa">واتساب @Hodeidahland</a>
+
+<a href="https://wa.me/967780181818" class="floating-wa" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12.01 2.01c-5.52 0-10 4.48-10 10 0 1.95.56 3.77 1.51 5.31L2 22l4.83-1.46c1.51.87 3.27 1.39 5.18 1.39 5.52 0 10-4.48 10-10 0-5.52-4.48-10-10-10zm5.66 14.39c-.27.76-1.55 1.47-2.14 1.54-.53.06-1.19.16-3.41-.76-2.67-1.11-4.38-3.83-4.51-4.01-.14-.18-1.07-1.43-1.07-2.73s.68-1.94.92-2.21c.24-.27.53-.34.71-.34.18 0 .36 0 .52.01.17.01.4-.07.63.48.24.57.81 1.98.88 2.12.07.14.12.31.02.48-.1.18-.15.28-.3.45-.15.17-.32.37-.45.5-.15.15-.31.32-.13.63.18.31.81 1.34 1.73 2.16 1.18 1.05 2.19 1.38 2.5 1.53.31.15.49.12.67-.08.18-.21.78-.91.99-1.22.21-.31.42-.26.71-.15.29.11 1.83.86 2.15 1.02.31.16.52.24.6.38.08.14.08.82-.19 1.58z"/></svg>
+  واتساب @Hodeidahland
+</a>
+
+<script>
+  // سكريبت القائمة الجانبية للجوال
+  const burger = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  burger.addEventListener('click', () => {
+    menu.classList.toggle('open');
+    document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+  });
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+</script>
 </body>
 </html>
